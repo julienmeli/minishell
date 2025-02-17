@@ -96,9 +96,9 @@ char	**ft_split(char *str, char *charset)
 		if (!ft_is_in_charset(*str, charset))
 		{
 			len = ft_wrdlen(str, charset);
-			printf("%d\n", len);
+			//printf("%d\n", len);
 			result[i] = ft_strdup(str, len);
-			printf("%s\n", result[i]);
+			//printf("%s\n", result[i]);
 			if (result[i] == NULL)
 			{
 				ft_free(result);
