@@ -1,12 +1,16 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <signal.h>
-#include <stdio.h>
-#include <readline/readline.h>
-#include <readline/history.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include "ft_split.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jmeli <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/21 10:23:22 by jmeli             #+#    #+#             */
+/*   Updated: 2025/02/21 11:17:00 by jmeli            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "minishell.h"
 
 int	jsh_launch(char **args)
 {
@@ -51,15 +55,20 @@ int	jsh_execute(char **args)
 		}
 		else if (chdir(args[1]) != 0)
 		{
-			perror("jsh");
+			perror("cd: wrong argument");
 			return (1);
 		}
-		return (0);
+		return (1);
 	}
 	else if (strcmp(args[0], "exit") == 0)
 	{
 		//exit(EXIT_SUCCESS);
 		return (0);
+	}
+	else if (ft_strcmp(args[0], "echo") == 0)
+	{
+		jsh_echo(args);
+		return (1);
 	}
 	else
 		return (jsh_launch(args));
@@ -79,7 +88,7 @@ void	jsh_loop(void)
 			break ;
 		if (*line)
 			add_history(line);
-		args = ft_split(line, " \a\b\t\n\v\f\r");
+		args = ft_split2(line, " \a\b\t\n\v\f\r");
 		status = jsh_execute(args);
 		free(args);
 		free (line);
