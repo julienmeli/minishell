@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   env.c                                              :+:      :+:    :+:   */
+/*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 18:22:05 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/25 15:52:45 by jmeli            ###   ########.fr       */
+/*   Created: 2025/02/21 09:36:58 by jmeli             #+#    #+#             */
+/*   Updated: 2025/02/25 15:52:50 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	jsh_env(void)
+int	clean_exit(char **args, int ex)
 {
-	extern char	**environ;
-	int			i;
-
-	i = 0;
-	while (environ[i])
-	{
-		printf("%s\n", environ[i]);
-		i++;
-	}
-	return (0);
+	ft_free(args);
+	return (ex);
 }
