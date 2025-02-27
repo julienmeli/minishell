@@ -1,14 +1,21 @@
-CC = cc -Wall -Wextra -Werror
+CC = cc -Wall -Wextra -Werror #-g -fsanitize=address
 INC = -I $(HEADERDIR)
 LIBFT := ./libft
 LIBRARY = libminishell.a
 HEADERDIR = .
-SRC = minishell.c\
-      executable.c\
-      ft_split2.c\
-      ft_strcmp.c\
-      exit.c\
-      builtin/echo.c
+SRC = minishell.c \
+executable.c \
+ft_split2.c \
+ft_strcmp.c \
+builtin/cd.c \
+builtin/exit.c \
+builtin/echo.c \
+builtin/env.c \
+builtin/export.c \
+builtin/export3.c \
+builtin/pwd.c \
+builtin/unset.c
+
 OBJ = $(SRC:.c=.o)
 SRCDIR = .
 OBJDIR = $(SRCDIR)
@@ -30,7 +37,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 clean:
 	make clean -C $(LIBFT)
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	make fclean -C $(LIBFT)
