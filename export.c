@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:14 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/25 15:55:23 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/02/26 16:37:55 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,12 @@ char	**copy_environ(char **environ)
 	i = 0;
 	while (environ[i])
 		i++;
-	if (!(array = (char **)malloc(sizeof(*array) * (i + 1))))
+	array = (char **)malloc(sizeof(*array) * (i + 1));
+	if (array == NULL)
 		return (NULL);
 	i = 0;
 	while (environ[i])
 	{
-		// if (!(array[i] = malloc(sizeof(char) * (ft_strlen(environ[i]) + 1))))
-		//	free_array(array, i);
 		array[i] = ft_strdup(environ[i]);
 		if (!array[i])
 			free_array(array, i);
@@ -77,6 +76,24 @@ char	**copy_environ(char **environ)
 	}
 	array[i] = NULL;
 	return (array);
+}
+
+int	print_export(void)
+{
+	extern char	**environ;
+	char		**temp;
+	int			j;
+
+	temp = copy_environ(environ);
+	sort_env_alphabetically(temp);
+	j = 0;
+	while (temp[j])
+	{
+		printf("%s\n", temp[j]);
+		j++;
+	}
+	free_array(temp, j);
+	return (0);
 }
 
 /*
