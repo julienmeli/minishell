@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:14 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/26 16:37:55 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/03 17:50:57 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../minishell.h"
 
 void	swap_strings(char **str1, char **str2)
 {
@@ -81,9 +81,17 @@ char	**copy_environ(char **environ)
 int	print_export(void)
 {
 	extern char	**environ;
-	char		**temp;
+	//char		**temp;
 	int			j;
-
+	
+	j = 0;
+	while (environ[j])
+	{
+		printf("%s\n", environ[j]);
+		j++;
+	}
+	printf("%d\n", j);
+	/*
 	temp = copy_environ(environ);
 	sort_env_alphabetically(temp);
 	j = 0;
@@ -93,6 +101,7 @@ int	print_export(void)
 		j++;
 	}
 	free_array(temp, j);
+	*/
 	return (0);
 }
 

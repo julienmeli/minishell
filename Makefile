@@ -1,49 +1,24 @@
-CC = cc -Wall -Wextra -Werror #-g -fsanitize=address
-INC = -I $(HEADERDIR)
-LIBFT := ./libft
-LIBRARY = libminishell.a
-HEADERDIR = .
-SRC = minishell.c \
-executable.c \
-ft_split2.c \
-ft_strcmp.c \
-builtin/cd.c \
-builtin/exit.c \
-builtin/echo.c \
-builtin/env.c \
-builtin/export.c \
-builtin/export3.c \
-builtin/pwd.c \
-builtin/unset.c
+NAME= minishell
+CC= cc
+CFLAGS = -Wall -Wextra -Werror -I$(LIBFTDIR) -ggdb
+SRCS= main.c src/pipes.c src/parsing.c src/more_parsing.c src/parser.c src/second_split.c src/parsing_utilities.c gnl/get_next_line.c gnl/get_next_line_utils.c src/ft_builtin.c src/builtin/cd.c src/builtin/echo.c src/builtin/env.c src/builtin/exit.c src/builtin/export.c src/builtin/export3.c src/builtin/pwd.c src/builtin/unset.c
 
-OBJ = $(SRC:.c=.o)
-SRCDIR = .
-OBJDIR = $(SRCDIR)
-SRCS = $(addprefix $(SRCDIR)/, $(SRC))
-OBJS = $(addprefix $(OBJDIR)/, $(OBJ))
-NAME = minishell
+OBJS= $(SRCS:.c=.o)
+LIBFTDIR = libft
+LIBFT = $(LIBFTDIR)/libft.a
 
-all: $(NAME)
-
-$(NAME): $(LIBRARY)
-	make bonus -C $(LIBFT)
-	$(CC) $(INC) $(SRC) -o $(NAME) -L. -lminishell -L$(LIBFT) -lft -lreadline
-
-$(LIBRARY): $(OBJS)
-	ar -rcs $@ $^
-
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(INC) -c $< -o $@
-
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lreadline $(LIBFT)
+$(LIBFT):
+	@make -C $(LIBFTDIR) > /dev/null
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 clean:
-	make clean -C $(LIBFT)
-	rm -f $(OBJ)
-
+	rm -f $(OBJS)
+	@make clean -C $(LIBFTDIR) > /dev/null
 fclean: clean
-	make fclean -C $(LIBFT)
 	rm -f $(NAME)
-	rm -f $(LIBRARY)
-
+	@make fclean -C $(LIBFTDIR) > /dev/null
+all: $(NAME)
 re: fclean all
-
-.PHONY: all clean fclean re
+.PHONY: clean fclean all re

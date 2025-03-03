@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:38 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/27 17:21:18 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/03 17:54:07 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../minishell.h"
 
 /*
 int	print_export(void)
@@ -49,6 +49,7 @@ int	update_existing_var(char *var, size_t len)
 		}
 		i++;
 	}
+	puts("on est la.");
 	return (0);
 }
 
@@ -73,7 +74,7 @@ char	**ft_new_environ(char *var, char **environ, int env_size, int i)
                 perror("memory allocation failed.");
                 return (NULL);
         }
-	printf("%p\n", (void *)new_environ); 	
+	//printf("%p\n", (void *)new_environ); 	
 	while (i < env_size)
 	{
 		new_environ[i] = ft_strdup(environ[i]);
@@ -135,7 +136,6 @@ char	**ft_new_environ(char *var, char **environ, int env_size, int i)
                 env_size--;
         }
 	*/
-	//ft_free(new_environ);
 	return (environ);
 }
 
@@ -148,14 +148,22 @@ int	add_new_var(char *var)
 	env_size = 0;
 	while (environ[env_size])
 		env_size++;
+	printf("env_size de add new var:%zu\n", env_size);
 	i = 0;
 	environ = ft_new_environ(var, environ, env_size, i);
 	environ[env_size + 1] = NULL;
 	//free(environ);
+	env_size = 0;
+        while (environ[env_size])
+	{
+                printf("%s\n", environ[env_size]);
+		env_size++;
+	}
+        printf("env_size a la fin de add new var:%zu\n", env_size);
 	return (0);
 }
 
-int	jsh_export(char **args)
+int	jsh_export(char **args, int *change_env)
 {
 	char	*equal_sign;
 	int		i;
@@ -170,8 +178,12 @@ int	jsh_export(char **args)
 		{
 			equal_sign = ft_strchr(args[i], '=');
 			len = equal_sign - args[i];
-			if (!update_existing_var(args[i], len))
+			if (update_existing_var(args[i], len) == 0)
+			{
 				add_new_var(args[i]);
+				(*change_env)++;
+				printf("%d\n", *change_env);
+			}
 			i++;
 		}
 	}
