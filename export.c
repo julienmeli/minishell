@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:14 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/05 11:06:18 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/05 13:32:37 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,17 @@ char	**copy_environ(char **environ)
 int	print_export(void)
 {
 	extern char	**environ;
-	//char		**temp;
+	char		**temp;
 	int			j;
 	
+	/*
 	j = 0;
 	while (environ[j])
 	{
 		printf("%s\n", environ[j]);
 		j++;
 	}
-	/*
+	*/
 	temp = copy_environ(environ);
 	sort_env_alphabetically(temp);
 	j = 0;
@@ -100,7 +101,6 @@ int	print_export(void)
 		j++;
 	}
 	free_array(temp, j);
-	*/
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:38 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/05 11:19:28 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/05 16:11:00 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,23 @@ int	update_existing_var(char *var, size_t len)
 {
 	int			i;
 	extern char	**environ;
-
+	char		*new_var;
+	
 	i = 0;
+	//printf("%zu\n", len);
 	//puts("b");
 	while (environ[i])
 	{
-		//puts("a");
 		if (ft_strncmp(environ[i], var, len) == 0 && environ[i][len] == '=')
 		{
 			free(environ[i]);
-			environ[i] = strdup(var);
+			if (!ft_strchr(var, '='))
+			{
+				new_var = ft_strjoin(var, "=''");
+				environ[i] = ft_strdup(new_var);
+			}
+			else
+				environ[i] = ft_strdup(var);
 			return (1);
 		}
 		i++;
@@ -41,7 +48,8 @@ char	*ft_new_var(char *var)
 		new_var = ft_strjoin(var, "=''");
 	else
 	{
-		return(var);
+		new_var = ft_strdup(var);
+		return(new_var);
 	}
 	return (new_var);
 }
@@ -59,8 +67,7 @@ char	**ft_new_environ(char *var, char **environ, int env_size, int i)
 	//printf("%p\n", (void *)new_environ); 	
 	while (i < env_size)
 	{
-		new_environ[i] = ft_strdup(environ[i]);
-		
+		new_environ[i] = ft_strdup(environ[i]);	
 		if (!new_environ[i])
 		{
 			free_array(new_environ, i);
@@ -85,39 +92,10 @@ char	**ft_new_environ(char *var, char **environ, int env_size, int i)
 	}
 	free(new_var);
 	new_environ[env_size + 1] = NULL;
-	//environ = new_environ;
-	/*
-	i = 0;
-	//env_size = ft_size_env(environ);
-	while (i < env_size)
-	{
-		free(environ[i]);
-		i++;
-	}
-	*/
 	free(environ);
 	environ = new_environ;
-	/*
-	while (env_size >= -1)
-	{
-		//free(new_environ[env_size]);
-		free(new_environ[env_size + 1]);
-		env_size--;
-	}
-	*/
 	new_environ = NULL;
-	//i = 0;
-	//free(new_environ[i]);
-	//new_environ[env_size] = NULL;
 	free(new_environ);
-	/*
-        while (env_size >= 0)
-        {
-                //free(new_environ[env_size]);
-                free(new_environ[env_size]);
-                env_size--;
-        }
-	*/
 	return (environ);
 }
 
@@ -150,7 +128,10 @@ int	jsh_export(char **args, int *change_env)
 		while (args[i])
 		{
 			equal_sign = ft_strchr(args[i], '=');
-			len = equal_sign - args[i];
+			if (!ft_strchr(args[i], '='))
+				len = ft_strlen(args[i]);
+			else
+				len = equal_sign - args[i];
 			if (update_existing_var(args[i], len) == 0)
 			{
 				add_new_var(args[i]);

@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 15:30:22 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/05 10:06:30 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/05 16:12:25 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ void	ft_free(char **array)
 	i = 0;
 	while (array[i])
 	{
+		array[i] = NULL;
 		free(array[i]);
 		i++;
 	}
+	array = NULL;
 	free(array);
 }
 
