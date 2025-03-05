@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 15:30:22 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/03 17:38:10 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/05 10:06:30 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	ft_builtin(char **args)
 	static	int	change_env;
 	//extern char	**environ;
 
-	puts("hello");
 	if (!args || args[0] == NULL)
 		return (1);
 	else if (strcmp(args[0], "cd") == 0)

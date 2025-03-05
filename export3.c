@@ -6,32 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:38 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/03 17:54:07 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/05 11:19:28 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../minishell.h"
-
-/*
-int	print_export(void)
-{
-	extern char	**environ;
-	char		**temp;
-	int			j;
-
-	temp = copy_environ(environ);
-	sort_env_alphabetically(temp);
-	j = 0;
-	while (temp[j])
-	{
-		// printf("declare -x %s\n", environ[j]);
-		printf("%s\n", temp[j]);
-		j++;
-	}
-	free_array(temp, j);
-	return (0);
-}
-*/
 
 int	update_existing_var(char *var, size_t len)
 {
@@ -39,8 +18,10 @@ int	update_existing_var(char *var, size_t len)
 	extern char	**environ;
 
 	i = 0;
+	//puts("b");
 	while (environ[i])
 	{
+		//puts("a");
 		if (ft_strncmp(environ[i], var, len) == 0 && environ[i][len] == '=')
 		{
 			free(environ[i]);
@@ -49,7 +30,6 @@ int	update_existing_var(char *var, size_t len)
 		}
 		i++;
 	}
-	puts("on est la.");
 	return (0);
 }
 
@@ -60,7 +40,9 @@ char	*ft_new_var(char *var)
 	if (!ft_strchr(var, '='))
 		new_var = ft_strjoin(var, "=''");
 	else
-		new_var = var;
+	{
+		return(var);
+	}
 	return (new_var);
 }
 
@@ -148,18 +130,9 @@ int	add_new_var(char *var)
 	env_size = 0;
 	while (environ[env_size])
 		env_size++;
-	printf("env_size de add new var:%zu\n", env_size);
 	i = 0;
 	environ = ft_new_environ(var, environ, env_size, i);
 	environ[env_size + 1] = NULL;
-	//free(environ);
-	env_size = 0;
-        while (environ[env_size])
-	{
-                printf("%s\n", environ[env_size]);
-		env_size++;
-	}
-        printf("env_size a la fin de add new var:%zu\n", env_size);
 	return (0);
 }
 
@@ -182,7 +155,6 @@ int	jsh_export(char **args, int *change_env)
 			{
 				add_new_var(args[i]);
 				(*change_env)++;
-				printf("%d\n", *change_env);
 			}
 			i++;
 		}
