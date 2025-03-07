@@ -1,8 +1,34 @@
 NAME= minishell
 CC= cc
 CFLAGS = -Wall -Wextra -Werror -I$(LIBFTDIR) -ggdb
-SRCS= main.c src/pipes.c src/parsing.c src/more_parsing.c src/parser.c src/second_split.c src/parsing_utilities.c gnl/get_next_line.c gnl/get_next_line_utils.c src/ft_builtin.c src/builtin/cd.c src/builtin/echo.c src/builtin/env.c src/builtin/exit.c src/builtin/export.c src/builtin/export3.c src/builtin/pwd.c src/builtin/unset.c
-
+SRCS=		main.c\
+		src/Parsing/parser.c\
+		src/Parsing/parser_utilities.c\
+		src/Parsing/first_split.c\
+		src/Parsing/first_split_utilities.c\
+		src/Parsing/listing.c\
+		src/Parsing/listing_utilities.c\
+		src/Parsing/second_split.c\
+		src/Parsing/valid_line.c\
+		src/Parsing/utilities_bordel.c\
+		src/Pipes/pipes.c\
+		src/Pipes/replacing.c\
+		src/Pipes/execute.c\
+		src/Pipes/input.c\
+		src/Pipes/output.c\
+		src/Pipes/utils.c\
+		gnl/get_next_line.c\
+		gnl/get_next_line_utils.c\
+		src/builtin/ft_builtin.c\
+	       	src/builtin/cd.c\
+	       	src/builtin/echo.c\
+	       	src/builtin/env.c\
+	       	src/builtin/exit.c\
+	       	src/builtin/export.c\
+	       	src/builtin/export4.c\
+	       	src/builtin/pwd.c\
+	       	src/builtin/unset.c\
+		src/builtin/env_list.c
 OBJS= $(SRCS:.c=.o)
 LIBFTDIR = libft
 LIBFT = $(LIBFTDIR)/libft.a

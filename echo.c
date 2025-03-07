@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 11:04:58 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/25 15:29:03 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/07 15:21:28 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../include/minishell.h"
 
 void	print_echo(char **args, int i)
 {

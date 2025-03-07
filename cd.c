@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 09:44:10 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/25 15:19:01 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/07 15:21:11 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../include/minishell.h"
 
 char	*get_root_directory(void)
 {
@@ -20,8 +20,8 @@ char	*get_root_directory(void)
 	i = 0;
 	while (environ[i])
 	{
-		if (ft_strncmp(environ[i], "OLDPWD=", 7) == 0)
-			return (ft_substr(environ[i], 7, ft_strlen(environ[i]) - 8 + 1));
+		if (ft_strncmp(environ[i], "HOME=", 5) == 0)
+			return (ft_substr(environ[i], 5, ft_strlen(environ[i]) - 5));
 		i++;
 	}
 	return (NULL);
@@ -41,6 +41,11 @@ int	jsh_cd(char **args)
 			free(root);
 			return (0);
 		}
+		return (1);
+	}
+	else if (args[2])
+	{
+		printf("cd: too many arguments\n");
 		return (1);
 	}
 	else if (chdir(args[1]) != 0)

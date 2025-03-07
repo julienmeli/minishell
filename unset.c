@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 12:01:27 by jmeli             #+#    #+#             */
-/*   Updated: 2025/02/27 15:07:00 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/07 15:23:04 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "../../include/minishell.h"
 
 int	ft_size_env(char **env)
 {
@@ -21,37 +21,6 @@ int	ft_size_env(char **env)
 		i++;
 	return (i);
 }
-
-/*
-static char	**ft_populate_new_env(char **new_environ, char **environ, int size,
-		int index)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (i < size)
-	{
-		if (i != index)
-		{
-			//new_environ[j] = ft_strdup(environ[i]);
-			new_environ[j] = environ[i];
-			
-			if (!new_environ[j])
-			{
-				free_array(new_environ, j);
-				return (NULL);
-			}
-			
-			j++;
-		}
-		i++;
-	}
-	new_environ[j] = NULL;
-	return (new_environ);
-}
-*/
 
 char	**ft_remove_var(char **environ, int index)
 {

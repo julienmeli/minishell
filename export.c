@@ -6,11 +6,11 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 15:55:14 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/05 13:32:37 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/07 15:22:30 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../minishell.h"
+#include "../../include/minishell.h"
 
 void	swap_strings(char **str1, char **str2)
 {
@@ -101,6 +101,7 @@ int	print_export(void)
 		j++;
 	}
 	free_array(temp, j);
+	printf("size of environ in print export:%d\n", j);
 	return (0);
 }
 
