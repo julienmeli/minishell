@@ -6,7 +6,7 @@
 /*   By: aharder <aharder@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 14:23:49 by aharder           #+#    #+#             */
-/*   Updated: 2025/03/07 15:53:50 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/07 02:33:52 by aharder          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@
 # include <libgen.h>
 # include "get_next_line.h"
 
-typedef struct	s_env
+typedef struct s_env
 {
-	char		*value;
-	char		*result;
+	char	*value;
+	char	*result;
 	struct s_env	*next;
-}		t_env;
+}	t_env;
 
 typedef struct s_commands
 {
@@ -50,6 +50,13 @@ typedef struct s_io_red
 	char			*file;
 	struct s_io_red	*next;
 }	t_io_red;
+
+typedef struct s_mini
+{
+	struct s_io_red 	*redirection;
+	struct s_env		*env;
+	struct s_commands	*commands;
+}	t_mini;
 
 typedef struct s_var_bundle
 {
@@ -73,11 +80,15 @@ int			find_op(char *s);
 int			splitlen(char *s, char c);
 int			cmp(char c);
 int			handle_quotes_bis(char *s, int i);
-int handle_operator(char *s, int *i, int *j, int *output);
-void init_list(char *list);
+int			handle_operator(char *s, int *i, int *j, int *output);
+void		init_list(char *list);
+// ENV
+void    add_first_command(t_commands **a, char *s, char **envp);
+t_env   *init_env(char **envp);
+void    add_env(t_env   **a, char *value, char *result);
 // LISTING
-void		putlist(t_commands **cmds, t_io_red **red, char **split, int *op);
-void		add_command(t_commands **a, char *splitted, int op);
+void		putlist(t_mini *mini, char **split, int *op, char **envp);
+void		add_command(t_commands **a, char *splitted, int op, char **envp);
 t_commands	*init_command_node(char **command);
 t_commands	*get_last_command(t_commands *a);
 char		**merge_command(char **old, char **to_add);
@@ -101,18 +112,18 @@ char		**second_split(char *s, char c);
 char		*write_segment(char *s, int start, int end);
 int			find_segment_end(char *s, char c, int start);
 // VALID LINES
-int valid_line(t_commands *cmd, t_io_red *red);
-int print_pipe_error();
+int			valid_line(t_commands *cmd, t_io_red *red);
+int			print_pipe_error(void);
 // PIPES
-int			createpipes(t_commands *commands, t_io_red *redirection);
-void		process_commands(t_commands *commands, int p_fd[2], int b_fd[2], int buffer);
+int			createpipes(t_commands *commands, t_io_red *redirection, t_env *env);
+void		process_commands(t_commands *cmds, t_env *env, int b_fd[2], int b);
 void		init_pipes(int p_fd[2], int b_fd[2]);
 void		close_pipes(int fd);
 int			is_command(char	*str);
 // REPLACING
-void		check_env(t_commands *temp);
-char		*replace(char *str, int i);
-char		*quote_replace(char *str, int i);
+void		check_env(t_commands *temp, t_env *env);
+char		*replace(char *str, int i, t_env *env);
+char		*quote_replace(char *str, int i, t_env *env);
 char		**insert_files(char **command, int index);
 int			ft_strchrpos(char *str, int searchedChar);
 // INPUT REDIRECTION
@@ -122,10 +133,10 @@ void		get_heredoc(int *p_fd, char *end);
 void		write_output(int buff_fd, t_io_red *redirection);
 void		copy(int buff_fd, int *o_fd, int size);
 void		copy_single(int buff_fd, int o_fd);
-int count_output_redirections(t_io_red *redirection);
+int			count_output_redirections(t_io_red *redirection);
 // EXECUTION
-int			execute(t_commands *temp, int buffer, int p_fd[2]);
-int			executefile(char *cmd, char **args, int i_fd, int o_fd);
+int			execute(t_commands *temp, int buffer, int p_fd[2], t_env *env);
+int			executefile(char **args, int i_fd, int o_fd, t_env *env);
 int			executefullfile(char *cmd, char **args, int i_fd, int o_fd);
 int			executecommand(char *cmd, char **args, int i_fd, int o_fd);
 char		*get_path(char *cmd);
@@ -134,36 +145,37 @@ void		free_and_close(int *fd, int size);
 void		free_cmd(t_commands **a);
 void		free_red(t_io_red **a);
 char		**get_filenames(void);
-int	count_files(void);
+int			count_files(void);
 
 // UTILITIES
 void		free_split(char **split);
-int array_size(char **arr);
-void print_commands(t_commands *commands);
-void print_redirection(t_io_red *redirection);
-void	init_pipes(int p_fd[2], int b_fd[2]);
+int			array_size(char **arr);
+void		print_commands(t_commands *commands);
+void		print_redirection(t_io_red *redirection);
+void		init_pipes(int p_fd[2], int b_fd[2]);
+char    *ft_getenv(t_env *env, char *name);
 
 //builtin
-//builtin
 int	ft_delete_file(char **envp);
-int     print_export(void);
+int     print_export(t_env **env);
 void    ft_free(char **array);
 void    free_array(char **array, int index);
-int     ft_builtin(t_commands **temp);
+int     ft_builtin(t_commands **temp, t_env **env);
 int     jsh_cd(char **args);
 int     jsh_echo(char **args);
-int     jsh_env(t_commands **cmd);
+int     jsh_env(t_commands **cmd, t_env **env);
 int     jsh_exit(char **args);
 //int     jsh_export(char **args, int *change_env);
 int     jsh_pwd(void);
-int     jsh_unset(char **args);
+int     jsh_unset(t_commands **temp, t_env **env);
 int     clean_exit(char **args, int exit);
 int     ft_size_env(char **env);
 //export4
-int     jsh_export(t_commands **temp);
-int     update(char *arg, int index);
-int     index_existing_var(char *arg);
+int     jsh_export(t_commands **temp, t_env **env);
+int     update(char *arg, int index, t_env **env);
+int     index_existing_var(char *arg, t_env **env);
 //env_list
-void    init_env(t_commands **commands, char **environ);
+//void    init_env(t_commands **commands, char **environ);
+
 
 #endif
