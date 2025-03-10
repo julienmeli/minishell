@@ -1,1 +1,35 @@
+src/builtin/ft_builtin.c\
+	       	src/builtin/cd.c\
+	       	src/builtin/echo.c\
+	       	src/builtin/env.c\
+		src/builtin/env_list.c\
+	       	src/builtin/exit.c\
+	       	src/builtin/export.c\
+	       	src/builtin/export4.c\
+	       	src/builtin/pwd.c\
+	       	src/builtin/unset.c
+
+//builtin
+int	ft_delete_file(char **envp);
+int     print_export(t_env **env);
+void    ft_free(char **array);
+void    free_array(char **array, int index);
+int     ft_builtin(t_commands **temp, t_env **env);
+int     jsh_cd(char **args);
+int     jsh_echo(char **args);
+int     jsh_env(t_commands **cmd, t_env **env);
+int     jsh_exit(char **args);
+//int     jsh_export(char **args, int *change_env);
+int     jsh_pwd(void);
+int     jsh_unset(t_commands **temp, t_env **env);
+int     clean_exit(char **args, int exit);
+int     ft_size_env(char **env);
+//export4
+int     jsh_export(t_commands **temp, t_env **env);
+int     update(char *arg, int index, t_env **env);
+int     index_existing_var(char *arg, t_env **env);
+//env_list
+int ft_list_size(t_env *begin_list);
+void	ft_env_push_back(t_env **begin_list, char *data);
+//void    init_env(t_commands **commands, char **environ);
 
