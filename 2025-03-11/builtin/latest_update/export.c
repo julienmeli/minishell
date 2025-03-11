@@ -6,7 +6,7 @@
 /*   By: aharder <aharder@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 00:16:22 by aharder           #+#    #+#             */
-/*   Updated: 2025/03/11 16:12:37 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/11 16:36:40 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,6 @@ int	export(char **args, t_env **env)
 	int	j;
 
 	index = -1;
-	j = 0;
 	if (!args[1])
 		return (print_export(env));
 	else
@@ -118,6 +117,7 @@ int	export(char **args, t_env **env)
                                 || ft_strcmp(args[i], "=") == 0)
                                 error_msg_not_valid_in_cntxt(args[i]);
 			index = index_existing_var(args[i], env);
+			j = 0;
 			if (args[i][ft_strlen(args[i]) - 1] == '=')
 			{
 				args[i] = ft_brute_force_equal(args[i], args[i + 1]);
@@ -126,15 +126,8 @@ int	export(char **args, t_env **env)
 			if (index >= 0)
 				update(args[i], index, env);
 			else
-			{
 				ft_env_push_back(env, args[i]);
-			}
-			i++;
-			if (j > 0)
-			{
-				i++;
-				j = 0;
-			}
+			i = i + 1 + j;
 		}
 	}
 	return (0);
