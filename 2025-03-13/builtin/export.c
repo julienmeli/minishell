@@ -76,7 +76,7 @@ int     error_msg_not_valid_in_cntxt(char *arg)
 
 	if (ft_strcmp(arg, "=") == 0)
                 printf("zsh: bad assignment\n");
-        else if (ft_isdigit(arg[0]))
+        else if (ft_isdigit(arg[0]) || arg[0] == '%')
         {
                 if (ft_strchr(arg, '='))
                 {
@@ -114,7 +114,7 @@ int	export(char **args, t_env **env)
 		while (args[i])
 		{
 			if (ft_isdigit(args[i][0]) || arg_is_not_alphanum(args[i])
-                                || ft_strcmp(args[i], "=") == 0)
+                                || ft_strcmp(args[i], "=") == 0 || ft_strncmp(args[i], "%", 1) == 0)
                                 error_msg_not_valid_in_cntxt(args[i]);
 			else
 			{
