@@ -9,6 +9,61 @@ MINISHELL_OUT="0_minishell_output.txt"
 
 # List of commands to test
 TEST_COMMANDS=(
+'TEST'
+'\n (touche entrée)'
+'[que des espaces]'
+'[que des tabulations]'
+':'
+'!'
+'>'
+'<'
+'>>'
+'<<'
+'<>'
+'>>>>>'
+'>>>>>>>>>>>>>>>'
+'<<<<<'
+'<<<<<<<<<<<<<<<<'
+'> > > >'
+'>> >> >> >>'
+'>>>> >> >> >>'
+'/'
+'//'
+'/.'
+'/./../../../../..'
+'///////'
+'-'
+'|'
+'| hola'
+'| | |'
+'||'
+'|||||'
+'|||||||||||||'
+'>>|><'
+'&&'
+'&&&&&'
+'&&&&&&&&&&&&&&'
+';;'
+';;;;;'
+';;;;;;;;;;;;;;;'
+'()'
+'( ( ) )'
+'( ( ( ( ) ) ) )'
+''
+'hola'
+'hola''
+'''
+'*'
+'*/*'
+'*/*'
+'.'
+'..'
+'~'
+'ABC=hola'
+'4ABC=hola'
+'hola'
+'hola que tal'
+'Makefile'
     	'echo'
 'echo -n'
 'echo Hola'
@@ -128,7 +183,6 @@ TEST_COMMANDS=(
 'echo "$DONTEXIST"Makefile'
 'echo "$DONTEXIST""Makefile"'
 'echo "$DONTEXIST" "Makefile"'
-
 )
 
 counter=1
@@ -137,6 +191,7 @@ counter=1
 echo "Running tests..."
 for cmd in "${TEST_COMMANDS[@]}"; do
     # Run command in Bash and save output
+    echo "[$counter] cmd:$cmd cmdend" >> "$BASH_OUT"
     echo "$cmd" | bash >> "$BASH_OUT" 2>&1
 	echo "[$counter]------------------------" >> "$BASH_OUT"
 
