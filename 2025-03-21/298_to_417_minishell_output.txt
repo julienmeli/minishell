@@ -1,0 +1,742 @@
+[1]-----------------
+>export HOLA=p
+>[1]-----------------------
+[2]-----------------
+>export BYE=w
+>[2]-----------------------
+[3]-----------------
+>"$HOLA"d
+>[3]-----------------------
+[4]-----------------
+>export HOLA=p
+>[4]-----------------------
+[5]-----------------
+>export BYE=w
+>[5]-----------------------
+[6]-----------------
+>"$HOLA""$BYE"d
+>[6]-----------------------
+[7]-----------------
+>export HOLA=p
+>[7]-----------------------
+[8]-----------------
+>export BYE=w
+>[8]-----------------------
+[9]-----------------
+>$"HOLA"$"BYE"d
+>[9]-----------------------
+[10]-----------------
+>export HOLA=p
+>[10]-----------------------
+[11]-----------------
+>export BYE=w
+>[11]-----------------------
+[12]-----------------
+>$HOLA$BYEd
+>[12]-----------------------
+[13]-----------------
+>export HOLA=-n
+export: not valid in this context: HOLA
+>[13]-----------------------
+[14]-----------------
+>"echo $HOLA" hey
+hey
+>[14]-----------------------
+[15]-----------------
+>export A=1 B=2 C=3 D=4 E=5 F=6 G=7 H=8
+>[15]-----------------------
+[16]-----------------
+>export HOLA=bonjour
+>[16]-----------------------
+[17]-----------------
+>env
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/56165_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=1
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+OLDPWD=/home/jmeli
+_=./minishell
+&=0x7ffc513d6470
++=0x7ffc513d6478
+>[17]-----------------------
+[18]-----------------
+>unset HOLA
+>[18]-----------------------
+[19]-----------------
+>env
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/56165_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=1
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+OLDPWD=/home/jmeli
+_=./minishell
+&=0x7ffe04652510
++=0x7ffe04652518
+>[19]-----------------------
+[20]-----------------
+>export HOLA=bonjour
+>[20]-----------------------
+[21]-----------------
+>env
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/56165_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=1
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+OLDPWD=/home/jmeli
+_=./minishell
+&=0x7ffd06bf9a40
++=0x7ffd06bf9a48
+>[21]-----------------------
+[22]-----------------
+>unset HOLA
+>[22]-----------------------
+[23]-----------------
+>unset HOLA
+>[23]-----------------------
+[24]-----------------
+>env
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/56165_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=1
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+OLDPWD=/home/jmeli
+_=./minishell
+&=0x7ffeecb77ff0
++=0x7ffeecb77ff8
+>[24]-----------------------
+[25]-----------------
+>unset PATH
+>[25]-----------------------
+[26]-----------------
+>echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+>[26]-----------------------
+[27]-----------------
+>unset PATH
+>[27]-----------------------
+[28]-----------------
+>ls
+0_bash_output.txt
+0_minishell_output.txt
+298_to_417_minishell_output.txt
+424_to_548_bash_output.txt
+424_to_548_minishell_output.txt
+42_minishell_tester
+6_bash_output.txt
+Makefile
+gnl
+include
+libft
+main.c
+main.o
+minishell
+src
+srcs
+tester.sh
+tester_298_to_417.sh
+tester_424_to_548 - Copy.sh:Zone.Identifier
+tester_424_to_548.sh
+tester_614_to_708.sh
+>[28]-----------------------
+[29]-----------------
+>unset ""
+>[29]-----------------------
+[30]-----------------
+>unset INEXISTANT
+>[30]-----------------------
+[31]-----------------
+>unset PWD
+>[31]-----------------------
+[32]-----------------
+>env | grep PWD
+PWD=/home/jmeli/minishell/20250320
+OLDPWD=/home/jmeli
+>[32]-----------------------
+[33]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[33]-----------------------
+[34]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[34]-----------------------
+[35]-----------------
+>unset PWD
+>[35]-----------------------
+[36]-----------------
+>env | grep PWD
+PWD=/home/jmeli/minishell/20250320
+OLDPWD=/home/jmeli
+>[36]-----------------------
+[37]-----------------
+>cd $PWD
+>[37]-----------------------
+[38]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[38]-----------------------
+[39]-----------------
+>unset OLDPWD
+>[39]-----------------------
+[40]-----------------
+>env | grep OLDPWD
+OLDPWD=/home/jmeli
+>[40]-----------------------
+[41]-----------------
+>unset 9HOLA
+>[41]-----------------------
+[42]-----------------
+>unset HOLA9
+>[42]-----------------------
+[43]-----------------
+>unset HOL?A
+>[43]-----------------------
+[44]-----------------
+>unset HOLA HOL?A
+>[44]-----------------------
+[45]-----------------
+>unset HOL?A HOLA
+>[45]-----------------------
+[46]-----------------
+>unset HOL?A HOL.A
+>[46]-----------------------
+[47]-----------------
+>unset HOLA=
+>[47]-----------------------
+[48]-----------------
+>unset HOL\\\\A
+>[48]-----------------------
+[49]-----------------
+>unset HOL;A
+>[49]-----------------------
+[50]-----------------
+>unset HOL.A
+>[50]-----------------------
+[51]-----------------
+>unset HOL+A
+>[51]-----------------------
+[52]-----------------
+>unset HOL=A
+>[52]-----------------------
+[53]-----------------
+>unset HOL{A
+>[53]-----------------------
+[54]-----------------
+>unset HOL}A
+>[54]-----------------------
+[55]-----------------
+>unset HOL-A
+>[55]-----------------------
+[56]-----------------
+>unset -HOLA
+>[56]-----------------------
+[57]-----------------
+>unset _HOLA
+>[57]-----------------------
+[58]-----------------
+>unset HOL_A
+>[58]-----------------------
+[59]-----------------
+>unset HOLA_
+>[59]-----------------------
+[60]-----------------
+>unset HOL*A
+>[60]-----------------------
+[61]-----------------
+>unset HOL#A
+>[61]-----------------------
+[62]-----------------
+>unset $HOLA
+>[62]-----------------------
+[63]-----------------
+>unset $PWD
+>[63]-----------------------
+[64]-----------------
+>unset HOL@
+>[64]-----------------------
+[65]-----------------
+>unset HOL!A
+>[65]-----------------------
+[66]-----------------
+>unset HOL^A
+>[66]-----------------------
+[67]-----------------
+>unset HOL$?A
+>[67]-----------------------
+[68]-----------------
+>unset HOL\~A
+>[68]-----------------------
+[69]-----------------
+>unset "" HOLA
+>[69]-----------------------
+[70]-----------------
+>env | grep HOLA
+>[70]-----------------------
+[71]-----------------
+>unset PATH
+>[71]-----------------------
+[72]-----------------
+>echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+>[72]-----------------------
+[73]-----------------
+>unset PATH
+>[73]-----------------------
+[74]-----------------
+>cat Makefile
+NAME= minishell
+CC= cc
+CFLAGS = -Wall -Wextra -Werror -I$(LIBFTDIR) -ggdb
+SRCS=		main.c\
+		src/Parsing/parser.c\
+		src/Parsing/parser_utilities.c\
+		src/Parsing/env.c\
+		src/Parsing/first_split.c\
+		src/Parsing/first_split_utilities.c\
+		src/Parsing/listing.c\
+		src/Parsing/listing_utilities.c\
+		src/Parsing/second_split.c\
+		src/Parsing/valid_line.c\
+		src/Parsing/utilities_bordel.c\
+		src/Pipes/pipes.c\
+		src/Pipes/replacing.c\
+		src/Pipes/replacing_utils.c\
+		src/Pipes/execute.c\
+		src/Pipes/more_execute.c\
+		src/Pipes/input.c\
+		src/Pipes/output.c\
+		src/Pipes/utils.c\
+		src/Pipes/exit_status.c\
+		src/builtin/cd.c\
+		src/builtin/echo.c\
+		src/builtin/env.c\
+		src/builtin/pwd.c\
+		src/builtin/export.c\
+		src/builtin/export_utils.c\
+		src/builtin/export_utils_2.c\
+		src/builtin/env_utils.c\
+		src/builtin/unset.c\
+		src/builtin/exit.c\
+		gnl/get_next_line.c\
+		gnl/get_next_line_utils.c
+OBJS= $(SRCS:.c=.o)
+LIBFTDIR = libft
+LIBFT = $(LIBFTDIR)/libft.a
+
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lreadline $(LIBFT)
+$(LIBFT):
+	@make -C $(LIBFTDIR) > /dev/null
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+clean:
+	rm -f $(OBJS)
+	@make clean -C $(LIBFTDIR) > /dev/null
+fclean: clean
+	rm -f $(NAME)
+	@make fclean -C $(LIBFTDIR) > /dev/null
+all: $(NAME)
+re: fclean all
+.PHONY: clean fclean all re
+>[74]-----------------------
+[75]-----------------
+>unset =
+>[75]-----------------------
+[76]-----------------
+>unset ======
+>[76]-----------------------
+[77]-----------------
+>unset ++++++
+>[77]-----------------------
+[78]-----------------
+>unset _______
+>[78]-----------------------
+[79]-----------------
+>unset export
+>[79]-----------------------
+[80]-----------------
+>unset echo
+>[80]-----------------------
+[81]-----------------
+>unset pwd
+>[81]-----------------------
+[82]-----------------
+>unset cd
+>[82]-----------------------
+[83]-----------------
+>unset unset
+>[83]-----------------------
+[84]-----------------
+>unset sudo
+>[84]-----------------------
+[85]-----------------
+>export hola | unset hola | echo $?
+2
+>[85]-----------------------
+[86]-----------------
+>/bin/echo
+
+>[86]-----------------------
+[87]-----------------
+>/bin/echo Hola Que Tal
+Hola Que Tal
+>[87]-----------------------
+[88]-----------------
+>/bin/env
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/56165_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=1
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+OLDPWD=/home/jmeli
+_=./minishell
+LINES=24
+COLUMNS=80
+>[88]-----------------------
+[89]-----------------
+>/bin/cd Desktop
+fail command: No such file or directory
+>[89]-----------------------
+[90]-----------------
+>history
+fail command: No such file or directory
+>[90]-----------------------
+[91]-----------------
+>[touche du haut]
+fail command: No such file or directory
+>[91]-----------------------
+[92]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[92]-----------------------
+[93]-----------------
+>pwd hola
+/home/jmeli/minishell/20250320
+>[93]-----------------------
+[94]-----------------
+>pwd ./hola
+/home/jmeli/minishell/20250320
+>[94]-----------------------
+[95]-----------------
+>pwd hola que tal
+/home/jmeli/minishell/20250320
+>[95]-----------------------
+[96]-----------------
+>pwd -p
+/home/jmeli/minishell/20250320
+>[96]-----------------------
+[97]-----------------
+>pwd --p
+/home/jmeli/minishell/20250320
+>[97]-----------------------
+[98]-----------------
+>pwd ---p
+/home/jmeli/minishell/20250320
+>[98]-----------------------
+[99]-----------------
+>pwd -- p
+/home/jmeli/minishell/20250320
+>[99]-----------------------
+[100]-----------------
+>pwd pwd pwd
+/home/jmeli/minishell/20250320
+>[100]-----------------------
+[101]-----------------
+>pwd ls
+/home/jmeli/minishell/20250320
+>[101]-----------------------
+[102]-----------------
+>pwd ls env
+/home/jmeli/minishell/20250320
+>[102]-----------------------
+[103]-----------------
+>cd
+>[103]-----------------------
+[104]-----------------
+>cd .
+>[104]-----------------------
+[105]-----------------
+>cd ./
+>[105]-----------------------
+[106]-----------------
+>cd ./././.
+>[106]-----------------------
+[107]-----------------
+>cd ././././
+>[107]-----------------------
+[108]-----------------
+>cd ..
+>[108]-----------------------
+[109]-----------------
+>cd ../
+>[109]-----------------------
+[110]-----------------
+>cd ../..
+>[110]-----------------------
+[111]-----------------
+>cd ../.
+>[111]-----------------------
+[112]-----------------
+>cd .././././.
+>[112]-----------------------
+[113]-----------------
+>cd srcs
+>[113]-----------------------
+[114]-----------------
+>cd srcs objs
+cd: too many arguments
+>[114]-----------------------
+[115]-----------------
+>cd srcs
+>[115]-----------------------
+[116]-----------------
+>cd "srcs"
+>[116]-----------------------
+[117]-----------------
+>cd /etc
+[117]-----------------------
+[118]-----------------
+>cd /etc
+[118]-----------------------
+[119]-----------------
+>cd /e"tc"
+cd: too many arguments
+>[119]-----------------------
+[120]-----------------
+>cd sr
+cd : error
+>[120]-----------------------
+[121]-----------------
+>cd Makefile
+cd : error
+>[121]-----------------------
+[122]-----------------
+>cd ../minishell
+>[122]-----------------------
+[123]-----------------
+>cd ../../../../../../..
+[123]-----------------------
+[124]-----------------
+>cd .././../.././../bin/ls
+cd : error
+>[124]-----------------------
+[125]-----------------
+>cd /
+[125]-----------------------
+[126]-----------------
+>cd /
+[126]-----------------------
+[127]-----------------
+>cd //
+[127]-----------------------
+[128]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[128]-----------------------
+[129]-----------------
+>cd //
+[129]-----------------------
+[130]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[130]-----------------------
+[131]-----------------
+>cd ///
+[131]-----------------------
+[132]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[132]-----------------------
+[133]-----------------
+>cd ////////
+[133]-----------------------
+[134]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[134]-----------------------
+[135]-----------------
+>cd ////////
+[135]-----------------------
+[136]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[136]-----------------------
+[137]-----------------
+>cd /minishell
+cd : error
+>[137]-----------------------
+[138]-----------------
+>cd /
+[138]-----------------------
+[139]-----------------
+>cd ..
+>[139]-----------------------
+[140]-----------------
+>cd _
+cd : error
+>[140]-----------------------
+[141]-----------------
+>cd -
+cd : error
+>[141]-----------------------
+[142]-----------------
+>cd --
+cd : error
+>[142]-----------------------
+[143]-----------------
+>cd ---
+cd : error
+>[143]-----------------------
+[144]-----------------
+>cd $HOME
+>[144]-----------------------
+[145]-----------------
+>cd $HOME $HOME
+cd: too many arguments
+>[145]-----------------------
+[146]-----------------
+>cd $HOME/42_works
+cd : error
+>[146]-----------------------
+[147]-----------------
+>cd "$PWD/srcs"
+cd : error
+>[147]-----------------------
+[148]-----------------
+>cd /home/jmeli/minishell/20250320/srcs
+>[148]-----------------------
+[149]-----------------
+>unset HOME
+>[149]-----------------------
+[150]-----------------
+>cd $HOME
+>[150]-----------------------
+[151]-----------------
+>unset HOME
+>[151]-----------------------
+[152]-----------------
+>export HOME=
+[152]-----------------------
+[153]-----------------
+>cd
+>[153]-----------------------
+[154]-----------------
+>unset HOME
+>[154]-----------------------
+[155]-----------------
+>export HOME
+>[155]-----------------------
+[156]-----------------
+>cd
+>[156]-----------------------
+[157]-----------------
+>cd minishell Docs crashtest.c
+cd: too many arguments
+>[157]-----------------------
+[158]-----------------
+>cd / | echo $?
+2
+>[158]-----------------------
+[159]-----------------
+>pwd
+/home/jmeli/minishell/20250320
+>[159]-----------------------

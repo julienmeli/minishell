@@ -1,0 +1,671 @@
+[1] cmd:mkdir a cmdend
+[1]------------------------
+[2] cmd:mkdir a/b cmdend
+[2]------------------------
+[3] cmd:cd a/b cmdend
+[3]------------------------
+[4] cmd:rm -r ../../a cmdend
+rm: cannot remove '../../a': No such file or directory
+[4]------------------------
+[5] cmd:cd .. cmdend
+[5]------------------------
+[6] cmd:mkdir a cmdend
+mkdir: cannot create directory ‘a’: File exists
+[6]------------------------
+[7] cmd:mkdir a/b cmdend
+mkdir: cannot create directory ‘a/b’: File exists
+[7]------------------------
+[8] cmd:cd a/b cmdend
+[8]------------------------
+[9] cmd:rm -r ../../a cmdend
+rm: cannot remove '../../a': No such file or directory
+[9]------------------------
+[10] cmd:pwd cmdend
+/home/jmeli/minishell/20250320
+[10]------------------------
+[11] cmd:mkdir a cmdend
+mkdir: cannot create directory ‘a’: File exists
+[11]------------------------
+[12] cmd:mkdir a/b cmdend
+mkdir: cannot create directory ‘a/b’: File exists
+[12]------------------------
+[13] cmd:cd a/b cmdend
+[13]------------------------
+[14] cmd:rm -r ../../a cmdend
+rm: cannot remove '../../a': No such file or directory
+[14]------------------------
+[15] cmd:echo $PWD cmdend
+/home/jmeli/minishell/20250320
+[15]------------------------
+[16] cmd:echo $OLDPWD cmdend
+/home/jmeli
+[16]------------------------
+[17] cmd:mkdir a cmdend
+mkdir: cannot create directory ‘a’: File exists
+[17]------------------------
+[18] cmd:mkdir a/b cmdend
+mkdir: cannot create directory ‘a/b’: File exists
+[18]------------------------
+[19] cmd:cd a/b cmdend
+[19]------------------------
+[20] cmd:rm -r ../../a cmdend
+rm: cannot remove '../../a': No such file or directory
+[20]------------------------
+[21] cmd:cd cmdend
+[21]------------------------
+[22] cmd:echo $PWD cmdend
+/home/jmeli/minishell/20250320
+[22]------------------------
+[23] cmd:echo $OLDPWD cmdend
+/home/jmeli
+[23]------------------------
+[24] cmd:mkdir a cmdend
+mkdir: cannot create directory ‘a’: File exists
+[24]------------------------
+[25] cmd:cd a cmdend
+[25]------------------------
+[26] cmd:rm -r ../a cmdend
+rm: cannot remove '../a': No such file or directory
+[26]------------------------
+[27] cmd:echo $PWD cmdend
+/home/jmeli/minishell/20250320
+[27]------------------------
+[28] cmd:echo $OLDPWD cmdend
+/home/jmeli
+[28]------------------------
+[29] cmd:export CDPATH=/ cmdend
+[29]------------------------
+[30] cmd:cd $HOME/.. cmdend
+[30]------------------------
+[31] cmd:export CDPATH=/ cmdend
+[31]------------------------
+[32] cmd:cd home/vietdu91 cmdend
+bash: line 1: cd: home/vietdu91: No such file or directory
+[32]------------------------
+[33] cmd:export CDPATH=./ cmdend
+[33]------------------------
+[34] cmd:cd . cmdend
+[34]------------------------
+[35] cmd:export CDPATH=./ cmdend
+[35]------------------------
+[36] cmd:cd .. cmdend
+[36]------------------------
+[37] cmd:chmod 000 minishell cmdend
+[37]------------------------
+[38] cmd:./minishell cmdend
+bash: line 1: ./minishell: Permission denied
+[38]------------------------
+[39] cmd:chmod 777 minishell cmdend
+[39]------------------------
+[40] cmd:ls hola cmdend
+ls: cannot access 'hola': No such file or directory
+[40]------------------------
+[41] cmd:./Makefile cmdend
+bash: line 1: ./Makefile: Permission denied
+[41]------------------------
+[42] cmd:./minishell cmdend
+>[42]------------------------
+[43] cmd:env | grep SHLVL cmdend
+SHLVL=1
+[43]------------------------
+[44] cmd:./minishell cmdend
+>[44]------------------------
+[45] cmd:env | grep SHLVL cmdend
+SHLVL=1
+[45]------------------------
+[46] cmd:exit cmdend
+[46]------------------------
+[47] cmd:env | grep SHLVL cmdend
+SHLVL=1
+[47]------------------------
+[48] cmd:touch hola cmdend
+[48]------------------------
+[49] cmd:./hola cmdend
+bash: line 1: ./hola: Permission denied
+[49]------------------------
+[50] cmd:env|"wc" -l cmdend
+27
+[50]------------------------
+[51] cmd:env|"wc "-l cmdend
+bash: line 1: wc -l: command not found
+[51]------------------------
+[52] cmd:expr 1 + 1 cmdend
+2
+[52]------------------------
+[53] cmd:expr $? + $? cmdend
+0
+[53]------------------------
+[54] cmd:env -i ./minishell cmdend
+>[54]------------------------
+[55] cmd:env cmdend
+SHELL=/bin/bash
+WSL2_GUI_APPS_ENABLED=1
+WSL_DISTRO_NAME=Ubuntu
+NAME=LAPTOP-UC8E4A9S
+PWD=/home/jmeli/minishell/20250320
+LOGNAME=jmeli
+_=/usr/bin/env
+HOME=/home/jmeli
+LANG=C.UTF-8
+WSL_INTEROP=/run/WSL/500_interop
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+WAYLAND_DISPLAY=wayland-0
+LESSCLOSE=/usr/bin/lesspipe %s %s
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=jmeli
+DISPLAY=:0
+SHLVL=2
+XDG_RUNTIME_DIR=/run/user/1000/
+WSLENV=
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOSTTYPE=x86_64
+PULSE_SERVER=unix:/mnt/wslg/PulseServer
+HOLA=hey
+OLDPWD=/home/jmeli
+[55]------------------------
+[56] cmd:env -i ./minishell cmdend
+>[56]------------------------
+[57] cmd:export cmdend
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+declare -x DISPLAY=":0"
+declare -x HOLA="hey"
+declare -x HOME="/home/jmeli"
+declare -x HOSTTYPE="x86_64"
+declare -x LANG="C.UTF-8"
+declare -x LESSCLOSE="/usr/bin/lesspipe %s %s"
+declare -x LESSOPEN="| /usr/bin/lesspipe %s"
+declare -x LOGNAME="jmeli"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x NAME="LAPTOP-UC8E4A9S"
+declare -x OLDPWD="/home/jmeli"
+declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/julie/AppData/Local/Microsoft/WindowsApps:/snap/bin"
+declare -x PULSE_SERVER="unix:/mnt/wslg/PulseServer"
+declare -x PWD="/home/jmeli/minishell/20250320"
+declare -x SHELL="/bin/bash"
+declare -x SHLVL="2"
+declare -x TERM="xterm-256color"
+declare -x USER="jmeli"
+declare -x WAYLAND_DISPLAY="wayland-0"
+declare -x WSL2_GUI_APPS_ENABLED="1"
+declare -x WSLENV=""
+declare -x WSL_DISTRO_NAME="Ubuntu"
+declare -x WSL_INTEROP="/run/WSL/500_interop"
+declare -x XDG_DATA_DIRS="/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XDG_RUNTIME_DIR="/run/user/1000/"
+declare -x _="/usr/bin/bash"
+[57]------------------------
+[58] cmd:env -i ./minishell cmdend
+>[58]------------------------
+[59] cmd:cd cmdend
+[59]------------------------
+[60] cmd:env -i ./minishell cmdend
+>[60]------------------------
+[61] cmd:cd ~ cmdend
+[61]------------------------
+[62] cmd:exit cmdend
+[62]------------------------
+[63] cmd:exit exit cmdend
+bash: line 1: exit: exit: numeric argument required
+[63]------------------------
+[64] cmd:exit hola cmdend
+bash: line 1: exit: hola: numeric argument required
+[64]------------------------
+[65] cmd:exit hola que tal cmdend
+bash: line 1: exit: hola: numeric argument required
+[65]------------------------
+[66] cmd:exit 42 cmdend
+[66]------------------------
+[67] cmd:exit 000042 cmdend
+[67]------------------------
+[68] cmd:exit 666 cmdend
+[68]------------------------
+[69] cmd:exit 666 666 cmdend
+bash: line 1: exit: too many arguments
+[69]------------------------
+[70] cmd:exit -666 666 cmdend
+bash: line 1: exit: too many arguments
+[70]------------------------
+[71] cmd:exit hola 666 cmdend
+bash: line 1: exit: hola: numeric argument required
+[71]------------------------
+[72] cmd:exit 666 666 666 666 cmdend
+bash: line 1: exit: too many arguments
+[72]------------------------
+[73] cmd:exit 666 hola 666 cmdend
+bash: line 1: exit: too many arguments
+[73]------------------------
+[74] cmd:exit hola 666 666 cmdend
+bash: line 1: exit: hola: numeric argument required
+[74]------------------------
+[75] cmd:exit 259 cmdend
+[75]------------------------
+[76] cmd:exit -4 cmdend
+[76]------------------------
+[77] cmd:exit -42 cmdend
+[77]------------------------
+[78] cmd:exit -0000042 cmdend
+[78]------------------------
+[79] cmd:exit -259 cmdend
+[79]------------------------
+[80] cmd:exit -666 cmdend
+[80]------------------------
+[81] cmd:exit +666 cmdend
+[81]------------------------
+[82] cmd:exit 0 cmdend
+[82]------------------------
+[83] cmd:exit +0 cmdend
+[83]------------------------
+[84] cmd:exit -0 cmdend
+[84]------------------------
+[85] cmd:exit +42 cmdend
+[85]------------------------
+[86] cmd:exit -69 -96 cmdend
+bash: line 1: exit: too many arguments
+[86]------------------------
+[87] cmd:exit --666 cmdend
+bash: line 1: exit: --666: numeric argument required
+[87]------------------------
+[88] cmd:exit ++++666 cmdend
+bash: line 1: exit: ++++666: numeric argument required
+[88]------------------------
+[89] cmd:exit ++++++0 cmdend
+bash: line 1: exit: ++++++0: numeric argument required
+[89]------------------------
+[90] cmd:exit ------0 cmdend
+bash: line 1: exit: ------0: numeric argument required
+[90]------------------------
+[91] cmd:exit "666" cmdend
+[91]------------------------
+[92] cmd:exit 666 cmdend
+[92]------------------------
+[93] cmd:exit -666 cmdend
+[93]------------------------
+[94] cmd:exit +666 cmdend
+[94]------------------------
+[95] cmd:exit ----666 cmdend
+bash: line 1: exit: ----666: numeric argument required
+[95]------------------------
+[96] cmd:exit ++++666 cmdend
+bash: line 1: exit: ++++666: numeric argument required
+[96]------------------------
+[97] cmd:exit 666 cmdend
+[97]------------------------
+[98] cmd:exit 26632 cmdend
+[98]------------------------
+[99] cmd:exit "666" cmdend
+[99]------------------------
+[100] cmd:exit 666 cmdend
+[100]------------------------
+[101] cmd:exit 666"666"666 cmdend
+[101]------------------------
+[102] cmd:exit +666"666"666 cmdend
+[102]------------------------
+[103] cmd:exit -666"666"666 cmdend
+[103]------------------------
+[104] cmd:exit 9223372036854775807 cmdend
+[104]------------------------
+[105] cmd:exit 9223372036854775808 cmdend
+bash: line 1: exit: 9223372036854775808: numeric argument required
+[105]------------------------
+[106] cmd:exit -9223372036854775808 cmdend
+[106]------------------------
+[107] cmd:exit -9223372036854775809 cmdend
+bash: line 1: exit: -9223372036854775809: numeric argument required
+[107]------------------------
+[108] cmd:cat | cat | cat | ls cmdend
+0_bash_output.txt
+0_minishell_output.txt
+424_to_548_bash_output.txt
+42_minishell_tester
+6_bash_output.txt
+Makefile
+a
+gnl
+hola
+include
+libft
+main.c
+main.o
+minishell
+src
+srcs
+tester.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[108]------------------------
+[109] cmd:ls | exit cmdend
+[109]------------------------
+[110] cmd:ls | exit 42 cmdend
+[110]------------------------
+[111] cmd:exit | ls cmdend
+0_bash_output.txt
+0_minishell_output.txt
+424_to_548_bash_output.txt
+42_minishell_tester
+6_bash_output.txt
+Makefile
+a
+gnl
+hola
+include
+libft
+main.c
+main.o
+minishell
+src
+srcs
+tester.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[111]------------------------
+[112] cmd:echo hola > bonjour cmdend
+[112]------------------------
+[113] cmd:exit | cat -e bonjour cmdend
+hola$
+[113]------------------------
+[114] cmd:echo hola > bonjour cmdend
+[114]------------------------
+[115] cmd:cat -e bonjour | exit cmdend
+[115]------------------------
+[116] cmd:echo | echo cmdend
+
+[116]------------------------
+[117] cmd:echo hola | echo que tal cmdend
+que tal
+[117]------------------------
+[118] cmd:pwd | echo hola cmdend
+hola
+[118]------------------------
+[119] cmd:env | echo hola cmdend
+hola
+[119]------------------------
+[120] cmd:echo oui | cat -e cmdend
+oui$
+[120]------------------------
+[121] cmd:echo oui | echo non | echo hola | grep oui cmdend
+[121]------------------------
+[122] cmd:echo oui | echo non | echo hola | grep non cmdend
+[122]------------------------
+[123] cmd:echo oui | echo non | echo hola | grep hola cmdend
+hola
+[123]------------------------
+[124] cmd:echo hola | cat -e | cat -e | cat -e cmdend
+hola$$$
+[124]------------------------
+[125] cmd:cd .. | echo "hola" cmdend
+hola
+[125]------------------------
+[126] cmd:cd / | echo "hola" cmdend
+hola
+[126]------------------------
+[127] cmd:cd .. | pwd cmdend
+/home/jmeli/minishell/20250320
+[127]------------------------
+[128] cmd:ifconfig | grep ":" cmdend
+bash: line 1: ifconfig: command not found
+[128]------------------------
+[129] cmd:ifconfig | grep hola cmdend
+bash: line 1: ifconfig: command not found
+[129]------------------------
+[130] cmd:whoami | grep $USER cmdend
+jmeli
+[130]------------------------
+[131] cmd:whoami | grep $USER > /tmp/bonjour cmdend
+[131]------------------------
+[132] cmd:cat /tmp/bonjour cmdend
+jmeli
+[132]------------------------
+[133] cmd:whoami | cat -e | cat -e > /tmp/bonjour cmdend
+[133]------------------------
+[134] cmd:cat /tmp/bonjour cmdend
+jmeli$$
+[134]------------------------
+[135] cmd:whereis ls | cat -e | cat -e > /tmp/bonjour cmdend
+[135]------------------------
+[136] cmd:cat /tmp/bonjour cmdend
+ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz$$
+[136]------------------------
+[137] cmd:ls | hola cmdend
+bash: line 1: hola: command not found
+[137]------------------------
+[138] cmd:ls | ls hola cmdend
+hola
+[138]------------------------
+[139] cmd:ls | ls | hola cmdend
+bash: line 1: hola: command not found
+[139]------------------------
+[140] cmd:ls | hola | ls cmdend
+0_bash_output.txt
+0_minishell_output.txt
+424_to_548_bash_output.txt
+42_minishell_tester
+6_bash_output.txt
+Makefile
+a
+bonjour
+gnl
+hola
+include
+libft
+main.c
+main.o
+minishell
+src
+srcs
+tester.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+bash: line 1: hola: command not found
+[140]------------------------
+[141] cmd:ls | ls | hola | rev cmdend
+bash: line 1: hola: command not found
+[141]------------------------
+[142] cmd:ls | ls | echo hola | rev cmdend
+aloh
+[142]------------------------
+[143] cmd:ls -la | grep "." cmdend
+total 764
+drwxr-xr-x  9 jmeli jmeli   4096 Mar 20 09:48 .
+drwxr-xr-x 22 jmeli jmeli   4096 Mar 20 09:05 ..
+-rw-r--r--  1 jmeli jmeli 111677 Mar 19 09:03 0_bash_output.txt
+-rw-r--r--  1 jmeli jmeli 118044 Mar 19 09:03 0_minishell_output.txt
+-rw-r--r--  1 jmeli jmeli  17474 Mar 20 09:49 424_to_548_bash_output.txt
+drwxr-xr-x  9 jmeli jmeli  32768 Mar 20 09:04 42_minishell_tester
+-rw-r--r--  1 jmeli jmeli  27899 Mar 19 14:44 6_bash_output.txt
+-rw-r--r--  1 jmeli jmeli   1317 Mar 12 14:23 Makefile
+drwxr-xr-x  3 jmeli jmeli   4096 Mar 20 09:48 a
+-rw-r--r--  1 jmeli jmeli      5 Mar 20 09:48 bonjour
+drwxr-xr-x  2 jmeli jmeli  28672 Mar 20 09:09 gnl
+-rw-r--r--  1 jmeli jmeli      0 Mar 20 09:48 hola
+drwxr-xr-x  2 jmeli jmeli  16384 Mar 20 09:03 include
+drwxr-xr-x  3 jmeli jmeli 233472 Mar 20 09:09 libft
+-rw-r--r--  1 jmeli jmeli   2856 Mar 18 09:57 main.c
+-rw-r--r--  1 jmeli jmeli  10896 Mar 20 09:09 main.o
+-rwxrwxrwx  1 jmeli jmeli 110328 Mar 20 09:09 minishell
+drwxr-xr-x  5 jmeli jmeli   4096 Mar 20 09:03 src
+drwxr-xr-x  2 jmeli jmeli   4096 Mar 20 09:04 srcs
+-rw-r--r--  1 jmeli jmeli   6173 Mar 18 19:06 tester.sh
+-rwxr-xr-x  1 jmeli jmeli   4423 Mar 20 09:47 tester_424_to_548.sh
+-rw-r--r--  1 jmeli jmeli   7796 Mar 19 14:45 tester_614_to_708.sh
+[143]------------------------
+[144] cmd:ls -la | grep "." cmdend
+total 764
+drwxr-xr-x  9 jmeli jmeli   4096 Mar 20 09:48 .
+drwxr-xr-x 22 jmeli jmeli   4096 Mar 20 09:05 ..
+-rw-r--r--  1 jmeli jmeli 111677 Mar 19 09:03 0_bash_output.txt
+-rw-r--r--  1 jmeli jmeli 118044 Mar 19 09:03 0_minishell_output.txt
+-rw-r--r--  1 jmeli jmeli  18799 Mar 20 09:49 424_to_548_bash_output.txt
+drwxr-xr-x  9 jmeli jmeli  32768 Mar 20 09:04 42_minishell_tester
+-rw-r--r--  1 jmeli jmeli  27899 Mar 19 14:44 6_bash_output.txt
+-rw-r--r--  1 jmeli jmeli   1317 Mar 12 14:23 Makefile
+drwxr-xr-x  3 jmeli jmeli   4096 Mar 20 09:48 a
+-rw-r--r--  1 jmeli jmeli      5 Mar 20 09:48 bonjour
+drwxr-xr-x  2 jmeli jmeli  28672 Mar 20 09:09 gnl
+-rw-r--r--  1 jmeli jmeli      0 Mar 20 09:48 hola
+drwxr-xr-x  2 jmeli jmeli  16384 Mar 20 09:03 include
+drwxr-xr-x  3 jmeli jmeli 233472 Mar 20 09:09 libft
+-rw-r--r--  1 jmeli jmeli   2856 Mar 18 09:57 main.c
+-rw-r--r--  1 jmeli jmeli  10896 Mar 20 09:09 main.o
+-rwxrwxrwx  1 jmeli jmeli 110328 Mar 20 09:09 minishell
+drwxr-xr-x  5 jmeli jmeli   4096 Mar 20 09:03 src
+drwxr-xr-x  2 jmeli jmeli   4096 Mar 20 09:04 srcs
+-rw-r--r--  1 jmeli jmeli   6173 Mar 18 19:06 tester.sh
+-rwxr-xr-x  1 jmeli jmeli   4423 Mar 20 09:47 tester_424_to_548.sh
+-rw-r--r--  1 jmeli jmeli   7796 Mar 19 14:45 tester_614_to_708.sh
+[144]------------------------
+[145] cmd:echo test.c | cat -e| cat -e| cat -e| cat -e| cat -e| cat -e| cat -e| cat -e|cat -e|cat -e|cat -e cmdend
+test.c$$$$$$$$$$$
+[145]------------------------
+[146] cmd:ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls cmdend
+0_bash_output.txt
+0_minishell_output.txt
+424_to_548_bash_output.txt
+42_minishell_tester
+6_bash_output.txt
+Makefile
+a
+bonjour
+gnl
+hola
+include
+libft
+main.c
+main.o
+minishell
+src
+srcs
+tester.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[146]------------------------
+[147] cmd:|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls'
+[147]------------------------
+[148] cmd:echo hola | cat | cat | cat | cat | cat | grep hola cmdend
+hola
+[148]------------------------
+[149] cmd:echo hola | cat cmdend
+hola
+[149]------------------------
+[150] cmd:echo hola| cat cmdend
+hola
+[150]------------------------
+[151] cmd:echo hola |cat cmdend
+hola
+[151]------------------------
+[152] cmd:echo hola|cat cmdend
+hola
+[152]------------------------
+[153] cmd:echo hola || cat cmdend
+hola
+[153]------------------------
+[154] cmd:echo hola ||| cat cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `echo hola ||| cat'
+[154]------------------------
+[155] cmd:ech|o hola | cat cmdend
+bash: line 1: o: command not found
+bash: line 1: ech: command not found
+[155]------------------------
+[156] cmd:cat Makefile | cat -e | cat -e cmdend
+NAME= minishell$$
+CC= cc$$
+CFLAGS = -Wall -Wextra -Werror -I$(LIBFTDIR) -ggdb$$
+SRCS=		main.c\$$
+		src/Parsing/parser.c\$$
+		src/Parsing/parser_utilities.c\$$
+		src/Parsing/env.c\$$
+		src/Parsing/first_split.c\$$
+		src/Parsing/first_split_utilities.c\$$
+		src/Parsing/listing.c\$$
+		src/Parsing/listing_utilities.c\$$
+		src/Parsing/second_split.c\$$
+		src/Parsing/valid_line.c\$$
+		src/Parsing/utilities_bordel.c\$$
+		src/Pipes/pipes.c\$$
+		src/Pipes/replacing.c\$$
+		src/Pipes/replacing_utils.c\$$
+		src/Pipes/execute.c\$$
+		src/Pipes/more_execute.c\$$
+		src/Pipes/input.c\$$
+		src/Pipes/output.c\$$
+		src/Pipes/utils.c\$$
+		src/Pipes/exit_status.c\$$
+		src/builtin/cd.c\$$
+		src/builtin/echo.c\$$
+		src/builtin/env.c\$$
+		src/builtin/pwd.c\$$
+		src/builtin/export.c\$$
+		src/builtin/export_utils.c\$$
+		src/builtin/export_utils_2.c\$$
+		src/builtin/env_utils.c\$$
+		src/builtin/unset.c\$$
+		src/builtin/exit.c\$$
+		gnl/get_next_line.c\$$
+		gnl/get_next_line_utils.c$$
+OBJS= $(SRCS:.c=.o)$$
+LIBFTDIR = libft$$
+LIBFT = $(LIBFTDIR)/libft.a$$
+$$
+$(NAME): $(OBJS) $(LIBFT)$$
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lreadline $(LIBFT)$$
+$(LIBFT):$$
+	@make -C $(LIBFTDIR) > /dev/null$$
+%.o:%.c$$
+	$(CC) $(CFLAGS) -c $< -o $@$$
+clean:$$
+	rm -f $(OBJS)$$
+	@make clean -C $(LIBFTDIR) > /dev/null$$
+fclean: clean$$
+	rm -f $(NAME)$$
+	@make fclean -C $(LIBFTDIR) > /dev/null$$
+all: $(NAME)$$
+re: fclean all$$
+.PHONY: clean fclean all re$$
+[156]------------------------
+[157] cmd:cat Makefile | grep srcs | cat -e cmdend
+[157]------------------------
+[158] cmd:cat Makefile | grep srcs | grep srcs | cat -e cmdend
+[158]------------------------
+[159] cmd:cat Makefile | grep pr | head -n 5 | cd file_not_exist cmdend
+bash: line 1: cd: file_not_exist: No such file or directory
+[159]------------------------
+[160] cmd:cat Makefile | grep pr | head -n 5 | hello cmdend
+bash: line 1: hello: command not found
+[160]------------------------
+[161] cmd:export HOLA=bonjour | cat -e | cat -e cmdend
+[161]------------------------
+[162] cmd:unset HOLA | cat -e cmdend
+[162]------------------------
+[163] cmd:export HOLA | echo hola cmdend
+hola
+[163]------------------------
+[164] cmd:env | grep PROUT cmdend
+[164]------------------------
+[165] cmd:export | echo hola cmdend
+hola
+[165]------------------------
+[166] cmd:sleep 3 | sleep 3 cmdend
+[166]------------------------
+[167] cmd:time sleep 3 | sleep 3 cmdend
+
+real	0m3.002s
+user	0m0.003s
+sys	0m0.000s
+[167]------------------------
+[168] cmd:sleep 3 | exit cmdend
+[168]------------------------
+[169] cmd:exit | sleep 3 cmdend
+[169]------------------------
+[170] cmd:echo hola > a cmdend
+bash: line 1: a: Is a directory
+[170]------------------------
+[171] cmd:>>b echo que tal cmdend
+[171]------------------------
+[172] cmd:cat a | <b cat | cat > c | cat cmdend
+cat: a: Is a directory
+[172]------------------------
