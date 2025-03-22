@@ -1,0 +1,2001 @@
+[1] cmd:$DONTEXIST cmdend
+[1]------------------------
+[2] cmd:$LESS$VAR cmdend
+[2]------------------------
+[3] cmd:Ctlr-C cmdend
+bash: line 1: Ctlr-C: command not found
+[3]------------------------
+[4] cmd:holaCtlr-C cmdend
+bash: line 1: holaCtlr-C: command not found
+[4]------------------------
+[5] cmd:cat (faire Ctlr-C apres avoir fait plusieurs fois [ENTREE]) cmdend
+bash: line 1: syntax error near unexpected token `faire'
+bash: line 1: `cat (faire Ctlr-C apres avoir fait plusieurs fois [ENTREE])'
+[5]------------------------
+[6] cmd:cat | rev(faire Ctlr-C apres avoir fait plusieurs fois [ENTREE]) cmdend
+bash: line 1: syntax error near unexpected token `faire'
+bash: line 1: `cat | rev(faire Ctlr-C apres avoir fait plusieurs fois [ENTREE])'
+[6]------------------------
+[7] cmd:Ctlr-D cmdend
+bash: line 1: Ctlr-D: command not found
+[7]------------------------
+[8] cmd:hola Ctlr-D cmdend
+bash: line 1: hola: command not found
+[8]------------------------
+[9] cmd:Ctlr-\ cmdend
+bash: line 3: Ctlr-: command not found
+[9]------------------------
+[10] cmd:hola Ctlr-\ cmdend
+bash: line 2: hola: command not found
+[10]------------------------
+[11] cmd:cat (faire Ctlr-\ apres avoir fait plusieurs fois [ENTREE]) cmdend
+bash: line 1: syntax error near unexpected token `faire'
+bash: line 1: `cat (faire Ctlr-\ apres avoir fait plusieurs fois [ENTREE])'
+[11]------------------------
+[12] cmd:sleep 3 | sleep 3 | sleep 3 (faire Ctlr-C une seconde apres) cmdend
+bash: line 1: syntax error near unexpected token `('
+bash: line 1: `sleep 3 | sleep 3 | sleep 3 (faire Ctlr-C une seconde apres)'
+[12]------------------------
+[13] cmd:sleep 3 | sleep 3 | sleep 3 (faire Ctlr-D une seconde apres) cmdend
+bash: line 1: syntax error near unexpected token `('
+bash: line 1: `sleep 3 | sleep 3 | sleep 3 (faire Ctlr-D une seconde apres)'
+[13]------------------------
+[14] cmd:sleep 3 | sleep 3 | sleep 3 (faire Ctlr-\ une seconde apres) cmdend
+bash: line 1: syntax error near unexpected token `('
+bash: line 1: `sleep 3 | sleep 3 | sleep 3 (faire Ctlr-\ une seconde apres)'
+[14]------------------------
+[15] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[15]------------------------
+[16] cmd:env hola cmdend
+env: ‘hola’: No such file or directory
+[16]------------------------
+[17] cmd:env hola que tal cmdend
+env: ‘hola’: No such file or directory
+[17]------------------------
+[18] cmd:env env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[18]------------------------
+[19] cmd:env env env env env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[19]------------------------
+[20] cmd:env ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+gnl
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[20]------------------------
+[21] cmd:env ./Makefile cmdend
+env: ‘./Makefile’: Permission denied
+[21]------------------------
+[22] cmd:export HOLA=bonjour cmdend
+[22]------------------------
+[23] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[23]------------------------
+[24] cmd:export HOLA=bonjour cmdend
+[24]------------------------
+[25] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[25]------------------------
+[26] cmd:export cmdend
+declare -x COLORTERM="truecolor"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101299/bus"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x DOCKER_HOST="unix:///run/user/101299/docker.sock"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x GDMSESSION="ubuntu"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab"
+declare -x GNOME_TERMINAL_SERVICE=":1.78"
+declare -x GPG_AGENT_INFO="/run/user/101299/gnupg/S.gpg-agent:0:1"
+declare -x GTK_IM_MODULE="ibus"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x HOME="/home/jmeli"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101299_p4tKPr"
+declare -x LANG="en_US.UTF-8"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x LOGNAME="jmeli"
+declare -x OLDPWD="/home/jmeli/A/minishell/20250322/src/Pipes"
+declare -x PATH="/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin"
+declare -x PWD="/home/jmeli/A/minishell/20250322"
+declare -x QT_ACCESSIBILITY="1"
+declare -x QT_IM_MODULE="ibus"
+declare -x SESSION_MANAGER="local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863"
+declare -x SHELL="/bin/zsh"
+declare -x SHLVL="2"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x SSH_AUTH_SOCK="/run/user/101299/keyring/ssh"
+declare -x SYSTEMD_EXEC_PID="20882"
+declare -x TERM="xterm-256color"
+declare -x USER="jmeli"
+declare -x VTE_VERSION="6800"
+declare -x XAUTHORITY="/home/jmeli/.Xauthority"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/jmeli"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_RUNTIME_DIR="/run/user/101299"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x XDG_SESSION_CLASS="user"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x XMODIFIERS="@im=ibus"
+declare -x _="/usr/bin/bash"
+declare -x hola="bonjour"
+[26]------------------------
+[27] cmd:export Hola cmdend
+[27]------------------------
+[28] cmd:export cmdend
+declare -x COLORTERM="truecolor"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101299/bus"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x DOCKER_HOST="unix:///run/user/101299/docker.sock"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x GDMSESSION="ubuntu"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab"
+declare -x GNOME_TERMINAL_SERVICE=":1.78"
+declare -x GPG_AGENT_INFO="/run/user/101299/gnupg/S.gpg-agent:0:1"
+declare -x GTK_IM_MODULE="ibus"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x HOME="/home/jmeli"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101299_p4tKPr"
+declare -x LANG="en_US.UTF-8"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x LOGNAME="jmeli"
+declare -x OLDPWD="/home/jmeli/A/minishell/20250322/src/Pipes"
+declare -x PATH="/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin"
+declare -x PWD="/home/jmeli/A/minishell/20250322"
+declare -x QT_ACCESSIBILITY="1"
+declare -x QT_IM_MODULE="ibus"
+declare -x SESSION_MANAGER="local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863"
+declare -x SHELL="/bin/zsh"
+declare -x SHLVL="2"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x SSH_AUTH_SOCK="/run/user/101299/keyring/ssh"
+declare -x SYSTEMD_EXEC_PID="20882"
+declare -x TERM="xterm-256color"
+declare -x USER="jmeli"
+declare -x VTE_VERSION="6800"
+declare -x XAUTHORITY="/home/jmeli/.Xauthority"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/jmeli"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_RUNTIME_DIR="/run/user/101299"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x XDG_SESSION_CLASS="user"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x XMODIFIERS="@im=ibus"
+declare -x _="/usr/bin/bash"
+declare -x hola="bonjour"
+[28]------------------------
+[29] cmd:export Hola9hey cmdend
+[29]------------------------
+[30] cmd:export cmdend
+declare -x COLORTERM="truecolor"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101299/bus"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x DOCKER_HOST="unix:///run/user/101299/docker.sock"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x GDMSESSION="ubuntu"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab"
+declare -x GNOME_TERMINAL_SERVICE=":1.78"
+declare -x GPG_AGENT_INFO="/run/user/101299/gnupg/S.gpg-agent:0:1"
+declare -x GTK_IM_MODULE="ibus"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x HOME="/home/jmeli"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101299_p4tKPr"
+declare -x LANG="en_US.UTF-8"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x LOGNAME="jmeli"
+declare -x OLDPWD="/home/jmeli/A/minishell/20250322/src/Pipes"
+declare -x PATH="/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin"
+declare -x PWD="/home/jmeli/A/minishell/20250322"
+declare -x QT_ACCESSIBILITY="1"
+declare -x QT_IM_MODULE="ibus"
+declare -x SESSION_MANAGER="local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863"
+declare -x SHELL="/bin/zsh"
+declare -x SHLVL="2"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x SSH_AUTH_SOCK="/run/user/101299/keyring/ssh"
+declare -x SYSTEMD_EXEC_PID="20882"
+declare -x TERM="xterm-256color"
+declare -x USER="jmeli"
+declare -x VTE_VERSION="6800"
+declare -x XAUTHORITY="/home/jmeli/.Xauthority"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/jmeli"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_RUNTIME_DIR="/run/user/101299"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x XDG_SESSION_CLASS="user"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x XMODIFIERS="@im=ibus"
+declare -x _="/usr/bin/bash"
+declare -x hola="bonjour"
+[30]------------------------
+[31] cmd:export $DONTEXIST cmdend
+declare -x COLORTERM="truecolor"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101299/bus"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x DOCKER_HOST="unix:///run/user/101299/docker.sock"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x GDMSESSION="ubuntu"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab"
+declare -x GNOME_TERMINAL_SERVICE=":1.78"
+declare -x GPG_AGENT_INFO="/run/user/101299/gnupg/S.gpg-agent:0:1"
+declare -x GTK_IM_MODULE="ibus"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x HOME="/home/jmeli"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101299_p4tKPr"
+declare -x LANG="en_US.UTF-8"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x LOGNAME="jmeli"
+declare -x OLDPWD="/home/jmeli/A/minishell/20250322/src/Pipes"
+declare -x PATH="/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin"
+declare -x PWD="/home/jmeli/A/minishell/20250322"
+declare -x QT_ACCESSIBILITY="1"
+declare -x QT_IM_MODULE="ibus"
+declare -x SESSION_MANAGER="local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863"
+declare -x SHELL="/bin/zsh"
+declare -x SHLVL="2"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x SSH_AUTH_SOCK="/run/user/101299/keyring/ssh"
+declare -x SYSTEMD_EXEC_PID="20882"
+declare -x TERM="xterm-256color"
+declare -x USER="jmeli"
+declare -x VTE_VERSION="6800"
+declare -x XAUTHORITY="/home/jmeli/.Xauthority"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/jmeli"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_RUNTIME_DIR="/run/user/101299"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x XDG_SESSION_CLASS="user"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x XMODIFIERS="@im=ibus"
+declare -x _="/usr/bin/bash"
+declare -x hola="bonjour"
+[31]------------------------
+[32] cmd:export | grep "HOME" cmdend
+declare -x HOME="/home/jmeli"
+[32]------------------------
+[33] cmd:export "" cmdend
+bash: line 1: export: `': not a valid identifier
+[33]------------------------
+[34] cmd:export = cmdend
+bash: line 1: export: `=': not a valid identifier
+[34]------------------------
+[35] cmd:export % cmdend
+bash: line 1: export: `%': not a valid identifier
+[35]------------------------
+[36] cmd:export $? cmdend
+bash: line 1: export: `0': not a valid identifier
+[36]------------------------
+[37] cmd:export ?=2 cmdend
+bash: line 1: export: `?=2': not a valid identifier
+[37]------------------------
+[38] cmd:export 9HOLA= cmdend
+bash: line 1: export: `9HOLA=': not a valid identifier
+[38]------------------------
+[39] cmd:export HOLA9=bonjour cmdend
+[39]------------------------
+[40] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[40]------------------------
+[41] cmd:export _HOLA=bonjour cmdend
+[41]------------------------
+[42] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[42]------------------------
+[43] cmd:export ___HOLA=bonjour cmdend
+[43]------------------------
+[44] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[44]------------------------
+[45] cmd:export _HO_LA_=bonjour cmdend
+[45]------------------------
+[46] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[46]------------------------
+[47] cmd:export HOL@=bonjour cmdend
+bash: line 1: export: `HOL@=bonjour': not a valid identifier
+[47]------------------------
+[48] cmd:export HOL\~A=bonjour cmdend
+bash: line 1: export: `HOL~A=bonjour': not a valid identifier
+[48]------------------------
+[49] cmd:export -HOLA=bonjour cmdend
+bash: line 1: export: -H: invalid option
+export: usage: export [-fn] [name[=value] ...] or export -p
+[49]------------------------
+[50] cmd:export --HOLA=bonjour cmdend
+bash: line 1: export: --: invalid option
+export: usage: export [-fn] [name[=value] ...] or export -p
+[50]------------------------
+[51] cmd:export HOLA-=bonjour cmdend
+bash: line 1: export: `HOLA-=bonjour': not a valid identifier
+[51]------------------------
+[52] cmd:export HO-LA=bonjour cmdend
+bash: line 1: export: `HO-LA=bonjour': not a valid identifier
+[52]------------------------
+[53] cmd:export HOL.A=bonjour cmdend
+bash: line 1: export: `HOL.A=bonjour': not a valid identifier
+[53]------------------------
+[54] cmd:export HOL\\\$A=bonjour cmdend
+bash: line 1: export: `HOL\$A=bonjour': not a valid identifier
+[54]------------------------
+[55] cmd:export HO\\\\LA=bonjour cmdend
+bash: line 1: export: `HO\\LA=bonjour': not a valid identifier
+[55]------------------------
+[56] cmd:export HOL}A=bonjour cmdend
+bash: line 1: export: `HOL}A=bonjour': not a valid identifier
+[56]------------------------
+[57] cmd:export HOL{A=bonjour cmdend
+bash: line 1: export: `HOL{A=bonjour': not a valid identifier
+[57]------------------------
+[58] cmd:export HO*LA=bonjour cmdend
+bash: line 1: export: `HO*LA=bonjour': not a valid identifier
+[58]------------------------
+[59] cmd:export HO#LA=bonjour cmdend
+bash: line 1: export: `HO#LA=bonjour': not a valid identifier
+[59]------------------------
+[60] cmd:export HO@LA=bonjour cmdend
+bash: line 1: export: `HO@LA=bonjour': not a valid identifier
+[60]------------------------
+[61] cmd:export HO!LA=bonjour cmdend
+bash: line 1: export: `HO!LA=bonjour': not a valid identifier
+[61]------------------------
+[62] cmd:export HO$?LA=bonjour cmdend
+[62]------------------------
+[63] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[63]------------------------
+[64] cmd:export +HOLA=bonjour cmdend
+bash: line 1: export: `+HOLA=bonjour': not a valid identifier
+[64]------------------------
+[65] cmd:export HOL+A=bonjour cmdend
+bash: line 1: export: `HOL+A=bonjour': not a valid identifier
+[65]------------------------
+[66] cmd:export HOLA+=bonjour cmdend
+[66]------------------------
+[67] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[67]------------------------
+[68] cmd:export HOLA=bonjour cmdend
+[68]------------------------
+[69] cmd:export HOLA+=bonjour cmdend
+[69]------------------------
+[70] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[70]------------------------
+[71] cmd:exportHOLA=bonjour cmdend
+[71]------------------------
+[72] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[72]------------------------
+[73] cmd:export HOLA =bonjour cmdend
+bash: line 1: export: `=bonjour': not a valid identifier
+[73]------------------------
+[74] cmd:export HOLA = bonjour cmdend
+bash: line 1: export: `=': not a valid identifier
+[74]------------------------
+[75] cmd:export HOLA=bon jour cmdend
+[75]------------------------
+[76] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[76]------------------------
+[77] cmd:export HOLA= bonjour cmdend
+[77]------------------------
+[78] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[78]------------------------
+[79] cmd:export HOLA=bonsoir cmdend
+[79]------------------------
+[80] cmd:export HOLA=bonretour cmdend
+[80]------------------------
+[81] cmd:export HOLA=bonjour cmdend
+[81]------------------------
+[82] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[82]------------------------
+[83] cmd:export HOLA=$HOME cmdend
+[83]------------------------
+[84] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[84]------------------------
+[85] cmd:export HOLA=bonjour$HOME cmdend
+[85]------------------------
+[86] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[86]------------------------
+[87] cmd:export HOLA=$HOMEbonjour cmdend
+[87]------------------------
+[88] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[88]------------------------
+[89] cmd:export HOLA=bon$jour cmdend
+[89]------------------------
+[90] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[90]------------------------
+[91] cmd:export HOLA=bon\jour cmdend
+[91]------------------------
+[92] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[92]------------------------
+[93] cmd:export HOLA=bon\\jour cmdend
+[93]------------------------
+[94] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[94]------------------------
+[95] cmd:export HOLA=bon(jour cmdend
+bash: line 1: syntax error near unexpected token `('
+bash: line 1: `export HOLA=bon(jour'
+[95]------------------------
+[96] cmd:export HOLA=bon()jour cmdend
+bash: line 1: syntax error near unexpected token `('
+bash: line 1: `export HOLA=bon()jour'
+[96]------------------------
+[97] cmd:export HOLA=bon&jour cmdend
+bash: line 1: jour: command not found
+[97]------------------------
+[98] cmd:export HOLA=bon@jour cmdend
+[98]------------------------
+[99] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[99]------------------------
+[100] cmd:export HOLA=bon;jour cmdend
+bash: line 1: jour: command not found
+[100]------------------------
+[101] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[101]------------------------
+[102] cmd:export HOLA=bon!jour cmdend
+[102]------------------------
+[103] cmd:export HOLA=bon"jour" cmdend
+[103]------------------------
+[104] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[104]------------------------
+[105] cmd:export HOLA$USER=bonjour cmdend
+[105]------------------------
+[106] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[106]------------------------
+[107] cmd:export HOLA=bonjour=casse-toi cmdend
+[107]------------------------
+[108] cmd:echo $HOLA cmdend
+
+[108]------------------------
+[109] cmd:export "HOLA=bonjour"=casse-toi cmdend
+[109]------------------------
+[110] cmd:echo $HOLA cmdend
+
+[110]------------------------
+[111] cmd:export HOLA=bonjour cmdend
+[111]------------------------
+[112] cmd:export BYE=casse-toi cmdend
+[112]------------------------
+[113] cmd:echo $HOLA et $BYE cmdend
+et
+[113]------------------------
+[114] cmd:export HOLA=bonjour BYE=casse-toi cmdend
+[114]------------------------
+[115] cmd:echo $HOLA et $BYE cmdend
+et
+[115]------------------------
+[116] cmd:export A=a B=b C=c cmdend
+[116]------------------------
+[117] cmd:echo $A $B $C cmdend
+
+[117]------------------------
+[118] cmd:export $HOLA=bonjour cmdend
+bash: line 1: export: `=bonjour': not a valid identifier
+[118]------------------------
+[119] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[119]------------------------
+[120] cmd:export HOLA="bonjour "  cmdend
+[120]------------------------
+[121] cmd:echo $HOLA | cat -e cmdend
+$
+[121]------------------------
+[122] cmd:export HOLA=" -n bonjour "  cmdend
+[122]------------------------
+[123] cmd:echo $HOLA cmdend
+
+[123]------------------------
+[124] cmd:export HOLA="bonjour "/ cmdend
+[124]------------------------
+[125] cmd:echo $HOLA cmdend
+
+[125]------------------------
+[126] cmd:export HOLA=''
+'echo  cmdend
+bash: line 2: unexpected EOF while looking for matching `''
+bash: line 3: syntax error: unexpected end of file
+[126]------------------------
+[127] cmd: | cat -e'
+'export HOLA=at'
+'c Makefile'
+'export  HOLA=bonjour'
+'env'
+ cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: ` | cat -e''
+[127]------------------------
+[128] cmd:export HOLA="cat Makefile | grep NAME"  cmdend
+[128]------------------------
+[129] cmd:
+'echo '
+'export HOLA=hey '
+'
+'echo =hey'
+'export HOLA= cmdend
+bash: line 2: echo : command not found
+bash: line 3: export HOLA=hey : command not found
+bash: line 6: $'\necho': command not found
+[129]------------------------
+[130] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[130]------------------------
+[131] cmd:hey cmdend
+bash: line 1: hey: command not found
+[131]------------------------
+[132] cmd: '
+'echo  | cat -e'
+'export HOLA= cmdend
+bash: line 2: $'\necho': command not found
+cat: invalid option -- '
+'
+Try 'cat --help' for more information.
+[132]------------------------
+[133] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[133]------------------------
+[134] cmd:hey cmdend
+bash: line 1: hey: command not found
+[134]------------------------
+[135] cmd: '
+'echo  | cat -e'
+'export HOLA= cmdend
+bash: line 2: $'\necho': command not found
+cat: invalid option -- '
+'
+Try 'cat --help' for more information.
+[135]------------------------
+[136] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[136]------------------------
+[137] cmd:hey cmdend
+bash: line 1: hey: command not found
+[137]------------------------
+[138] cmd: '
+'echo wesh | cat -e'
+'export HOLA= cmdend
+bash: line 2: $'\necho': command not found
+cat: invalid option -- '
+'
+Try 'cat --help' for more information.
+[138]------------------------
+[139] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[139]------------------------
+[140] cmd:hey cmdend
+bash: line 1: hey: command not found
+[140]------------------------
+[141] cmd: '
+'echo wesh.'
+'export HOLA= cmdend
+bash: line 3: $'\necho': command not found
+[141]------------------------
+[142] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[142]------------------------
+[143] cmd:hey cmdend
+bash: line 1: hey: command not found
+[143]------------------------
+[144] cmd: '
+'echo wesh$HOLA.'
+'export HOLA= cmdend
+bash: line 3: $'\necho': command not found
+[144]------------------------
+[145] cmd:bonjour cmdend
+bash: line 1: bonjour: command not found
+[145]------------------------
+[146] cmd:hey cmdend
+bash: line 1: hey: command not found
+[146]------------------------
+[147] cmd: '
+'echo wesh$HOLA cmdend
+bash: line 2: $'\necho': command not found
+[147]------------------------
+[148] cmd:HOLA.'
+'export HOLA=bonjour'
+'export HOLA= cmdend
+bash: line 3: $'HOLA.\nexport': command not found
+[148]------------------------
+[149] cmd:hola cmdend
+bash: line 1: hola: command not found
+[149]------------------------
+[150] cmd:et cmdend
+bash: line 1: et: command not found
+[150]------------------------
+[151] cmd:'
+'echo '
+'export HOLA=bonjour'
+'export HOLA=' hola et ''
+'echo '
+'export HOLA=bonjour'
+'export HOLA= cmdend
+bash: line 3: $'\necho': command not found
+[151]------------------------
+[152] cmd:hola cmdend
+bash: line 1: hola: command not found
+[152]------------------------
+[153] cmd:et cmdend
+bash: line 1: et: command not found
+[153]------------------------
+[154] cmd:'
+'echo '
+'export HOLA=ls cmdend
+bash: line 3: $'\necho': command not found
+[154]------------------------
+[155] cmd:-l cmdend
+bash: line 1: -l: command not found
+[155]------------------------
+[156] cmd:- cmdend
+bash: line 1: -: command not found
+[156]------------------------
+[157] cmd:a'
+'echo '
+'export HOLA=s cmdend
+bash: line 3: $'a\necho': command not found
+[157]------------------------
+[158] cmd:-la '
+'l'
+'export HOLA=s cmdend
+bash: line 3: -la: command not found
+[158]------------------------
+[159] cmd:-la '
+'l'
+'export HOLA=s cmdend
+bash: line 3: -la: command not found
+[159]------------------------
+[160] cmd:-la '
+'l'''
+'export HOLA=l '
+''
+'export HOLA=l '
+''
+'export HOL=A=bonjour'
+
+'env'
+'export HOLA=l '
+'''s'
+'export HOL=A='
+'env'
+
+'export TE+S=T'
+'env'
+ cmdend
+bash: line 16: unexpected EOF while looking for matching `''
+bash: line 18: syntax error: unexpected end of file
+[160]------------------------
+[161] cmd:export ""="" cmdend
+bash: line 1: export: `=': not a valid identifier
+[161]------------------------
+[162] cmd:export = cmdend
+bash: line 1: export: `=': not a valid identifier
+[162]------------------------
+[163] cmd:export "="="=" cmdend
+bash: line 1: export: `===': not a valid identifier
+[163]------------------------
+[164] cmd:export === cmdend
+bash: line 1: export: `===': not a valid identifier
+[164]------------------------

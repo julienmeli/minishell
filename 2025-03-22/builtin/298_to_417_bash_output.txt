@@ -1,0 +1,689 @@
+[1] cmd:export HOLA=p cmdend
+[1]------------------------
+[2] cmd:export BYE=w cmdend
+[2]------------------------
+[3] cmd:"$HOLA"d cmdend
+bash: line 1: d: command not found
+[3]------------------------
+[4] cmd:export HOLA=p cmdend
+[4]------------------------
+[5] cmd:export BYE=w cmdend
+[5]------------------------
+[6] cmd:"$HOLA""$BYE"d cmdend
+bash: line 1: d: command not found
+[6]------------------------
+[7] cmd:export HOLA=p cmdend
+[7]------------------------
+[8] cmd:export BYE=w cmdend
+[8]------------------------
+[9] cmd:$"HOLA"$"BYE"d cmdend
+bash: line 1: HOLABYEd: command not found
+[9]------------------------
+[10] cmd:export HOLA=p cmdend
+[10]------------------------
+[11] cmd:export BYE=w cmdend
+[11]------------------------
+[12] cmd:$HOLA$BYEd cmdend
+[12]------------------------
+[13] cmd:export HOLA=-n cmdend
+[13]------------------------
+[14] cmd:"echo $HOLA" hey cmdend
+bash: line 1: echo : command not found
+[14]------------------------
+[15] cmd:export A=1 B=2 C=3 D=4 E=5 F=6 G=7 H=8 cmdend
+[15]------------------------
+[16] cmd:export HOLA=bonjour cmdend
+[16]------------------------
+[17] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[17]------------------------
+[18] cmd:unset HOLA cmdend
+[18]------------------------
+[19] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[19]------------------------
+[20] cmd:export HOLA=bonjour cmdend
+[20]------------------------
+[21] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[21]------------------------
+[22] cmd:unset HOLA cmdend
+[22]------------------------
+[23] cmd:unset HOLA cmdend
+[23]------------------------
+[24] cmd:env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/usr/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[24]------------------------
+[25] cmd:unset PATH cmdend
+[25]------------------------
+[26] cmd:echo $PATH cmdend
+/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+[26]------------------------
+[27] cmd:unset PATH cmdend
+[27]------------------------
+[28] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+gnl
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[28]------------------------
+[29] cmd:unset "" cmdend
+[29]------------------------
+[30] cmd:unset INEXISTANT cmdend
+[30]------------------------
+[31] cmd:unset PWD cmdend
+[31]------------------------
+[32] cmd:env | grep PWD cmdend
+PWD=/home/jmeli/A/minishell/20250322
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[32]------------------------
+[33] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[33]------------------------
+[34] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[34]------------------------
+[35] cmd:unset PWD cmdend
+[35]------------------------
+[36] cmd:env | grep PWD cmdend
+PWD=/home/jmeli/A/minishell/20250322
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[36]------------------------
+[37] cmd:cd $PWD cmdend
+[37]------------------------
+[38] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[38]------------------------
+[39] cmd:unset OLDPWD cmdend
+[39]------------------------
+[40] cmd:env | grep OLDPWD cmdend
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[40]------------------------
+[41] cmd:unset 9HOLA cmdend
+[41]------------------------
+[42] cmd:unset HOLA9 cmdend
+[42]------------------------
+[43] cmd:unset HOL?A cmdend
+[43]------------------------
+[44] cmd:unset HOLA HOL?A cmdend
+[44]------------------------
+[45] cmd:unset HOL?A HOLA cmdend
+[45]------------------------
+[46] cmd:unset HOL?A HOL.A cmdend
+[46]------------------------
+[47] cmd:unset HOLA= cmdend
+[47]------------------------
+[48] cmd:unset HOL\\\\A cmdend
+[48]------------------------
+[49] cmd:unset HOL;A cmdend
+bash: line 1: A: command not found
+[49]------------------------
+[50] cmd:unset HOL.A cmdend
+[50]------------------------
+[51] cmd:unset HOL+A cmdend
+[51]------------------------
+[52] cmd:unset HOL=A cmdend
+[52]------------------------
+[53] cmd:unset HOL{A cmdend
+[53]------------------------
+[54] cmd:unset HOL}A cmdend
+[54]------------------------
+[55] cmd:unset HOL-A cmdend
+[55]------------------------
+[56] cmd:unset -HOLA cmdend
+bash: line 1: unset: -H: invalid option
+unset: usage: unset [-f] [-v] [-n] [name ...]
+[56]------------------------
+[57] cmd:unset _HOLA cmdend
+[57]------------------------
+[58] cmd:unset HOL_A cmdend
+[58]------------------------
+[59] cmd:unset HOLA_ cmdend
+[59]------------------------
+[60] cmd:unset HOL*A cmdend
+[60]------------------------
+[61] cmd:unset HOL#A cmdend
+[61]------------------------
+[62] cmd:unset $HOLA cmdend
+[62]------------------------
+[63] cmd:unset $PWD cmdend
+[63]------------------------
+[64] cmd:unset HOL@ cmdend
+[64]------------------------
+[65] cmd:unset HOL!A cmdend
+[65]------------------------
+[66] cmd:unset HOL^A cmdend
+[66]------------------------
+[67] cmd:unset HOL$?A cmdend
+[67]------------------------
+[68] cmd:unset HOL\~A cmdend
+[68]------------------------
+[69] cmd:unset "" HOLA cmdend
+[69]------------------------
+[70] cmd:env | grep HOLA cmdend
+[70]------------------------
+[71] cmd:unset PATH cmdend
+[71]------------------------
+[72] cmd:echo $PATH cmdend
+/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+[72]------------------------
+[73] cmd:unset PATH cmdend
+[73]------------------------
+[74] cmd:cat Makefile cmdend
+NAME= minishell
+CC= cc
+CFLAGS = -Wall -Wextra -Werror -I$(LIBFTDIR) -ggdb
+SRCS=		main.c\
+		src/Parsing/parser.c\
+		src/Parsing/parser_utilities.c\
+		src/Parsing/env.c\
+		src/Parsing/first_split.c\
+		src/Parsing/first_split_utilities.c\
+		src/Parsing/listing.c\
+		src/Parsing/listing_utilities.c\
+		src/Parsing/second_split.c\
+		src/Parsing/valid_line.c\
+		src/Parsing/utilities_bordel.c\
+		src/Pipes/pipes.c\
+		src/Pipes/replacing.c\
+		src/Pipes/replacing_utils.c\
+		src/Pipes/replacing_dollar_sign.c\
+		src/Pipes/execute.c\
+		src/Pipes/more_execute.c\
+		src/Pipes/input.c\
+		src/Pipes/output.c\
+		src/Pipes/utils.c\
+		src/Pipes/exit_status.c\
+		src/builtin/cd.c\
+		src/builtin/echo.c\
+		src/builtin/env.c\
+		src/builtin/pwd.c\
+		src/builtin/export.c\
+		src/builtin/export_utils.c\
+		src/builtin/env_utils.c\
+		src/builtin/unset.c\
+		src/builtin/exit.c\
+		gnl/get_next_line.c\
+		gnl/get_next_line_utils.c
+OBJS= $(SRCS:.c=.o)
+LIBFTDIR = libft
+LIBFT = $(LIBFTDIR)/libft.a
+
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lreadline $(LIBFT)
+$(LIBFT):
+	@make -C $(LIBFTDIR) > /dev/null
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+clean:
+	rm -f $(OBJS)
+	@make clean -C $(LIBFTDIR) > /dev/null
+fclean: clean
+	rm -f $(NAME)
+	@make fclean -C $(LIBFTDIR) > /dev/null
+all: $(NAME)
+re: fclean all
+.PHONY: clean fclean all re
+[74]------------------------
+[75] cmd:unset = cmdend
+[75]------------------------
+[76] cmd:unset ====== cmdend
+[76]------------------------
+[77] cmd:unset ++++++ cmdend
+[77]------------------------
+[78] cmd:unset _______ cmdend
+[78]------------------------
+[79] cmd:unset export cmdend
+[79]------------------------
+[80] cmd:unset echo cmdend
+[80]------------------------
+[81] cmd:unset pwd cmdend
+[81]------------------------
+[82] cmd:unset cd cmdend
+[82]------------------------
+[83] cmd:unset unset cmdend
+[83]------------------------
+[84] cmd:unset sudo cmdend
+[84]------------------------
+[85] cmd:export hola | unset hola | echo $? cmdend
+0
+[85]------------------------
+[86] cmd:/bin/echo cmdend
+
+[86]------------------------
+[87] cmd:/bin/echo Hola Que Tal cmdend
+Hola Que Tal
+[87]------------------------
+[88] cmd:/bin/env cmdend
+SHELL=/bin/zsh
+SESSION_MANAGER=local/c1r6s5.42luxembourg.lu:@/tmp/.ICE-unix/20863,unix/c1r6s5.42luxembourg.lu:/tmp/.ICE-unix/20863
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+SSH_AGENT_LAUNCHER=gnome-keyring
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+SSH_AUTH_SOCK=/run/user/101299/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+FT_HOOK_NAME=login-user
+hola=bonjour
+GTK_MODULES=gail:atk-bridge
+FT_HOOK_PATHNAME=login-user.d
+KRB5CCNAME=FILE:/tmp/krb5cc_101299_p4tKPr
+PWD=/home/jmeli/A/minishell/20250322
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=jmeli
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/101299/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=20882
+_=/bin/env
+XAUTHORITY=/home/jmeli/.Xauthority
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/jmeli
+HOME=/home/jmeli
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+VTE_VERSION=6800
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/8d3bbb98_2064_41c9_b52e_2b95979047ab
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LIBVIRT_DEFAULT_URI=qemu:///system
+USER=jmeli
+GNOME_TERMINAL_SERVICE=:1.78
+DISPLAY=:0
+SHLVL=2
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/101299
+DOCKER_HOST=unix:///run/user/101299/docker.sock
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/jmeli/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/home/jmeli/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/jmeli/.local/bin
+GDMSESSION=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101299/bus
+OLDPWD=/home/jmeli/A/minishell/20250322/src/Pipes
+[88]------------------------
+[89] cmd:/bin/cd Desktop cmdend
+bash: line 1: /bin/cd: No such file or directory
+[89]------------------------
+[90] cmd:history cmdend
+[90]------------------------
+[91] cmd:[touche du haut] cmdend
+bash: line 1: [touche: command not found
+[91]------------------------
+[92] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[92]------------------------
+[93] cmd:pwd hola cmdend
+/home/jmeli/A/minishell/20250322
+[93]------------------------
+[94] cmd:pwd ./hola cmdend
+/home/jmeli/A/minishell/20250322
+[94]------------------------
+[95] cmd:pwd hola que tal cmdend
+/home/jmeli/A/minishell/20250322
+[95]------------------------
+[96] cmd:pwd -p cmdend
+bash: line 1: pwd: -p: invalid option
+pwd: usage: pwd [-LP]
+[96]------------------------
+[97] cmd:pwd --p cmdend
+bash: line 1: pwd: --: invalid option
+pwd: usage: pwd [-LP]
+[97]------------------------
+[98] cmd:pwd ---p cmdend
+bash: line 1: pwd: --: invalid option
+pwd: usage: pwd [-LP]
+[98]------------------------
+[99] cmd:pwd -- p cmdend
+/home/jmeli/A/minishell/20250322
+[99]------------------------
+[100] cmd:pwd pwd pwd cmdend
+/home/jmeli/A/minishell/20250322
+[100]------------------------
+[101] cmd:pwd ls cmdend
+/home/jmeli/A/minishell/20250322
+[101]------------------------
+[102] cmd:pwd ls env cmdend
+/home/jmeli/A/minishell/20250322
+[102]------------------------
+[103] cmd:cd cmdend
+[103]------------------------
+[104] cmd:cd . cmdend
+[104]------------------------
+[105] cmd:cd ./ cmdend
+[105]------------------------
+[106] cmd:cd ./././. cmdend
+[106]------------------------
+[107] cmd:cd ././././ cmdend
+[107]------------------------
+[108] cmd:cd .. cmdend
+[108]------------------------
+[109] cmd:cd ../ cmdend
+[109]------------------------
+[110] cmd:cd ../.. cmdend
+[110]------------------------
+[111] cmd:cd ../. cmdend
+[111]------------------------
+[112] cmd:cd .././././. cmdend
+[112]------------------------
+[113] cmd:cd srcs cmdend
+bash: line 1: cd: srcs: No such file or directory
+[113]------------------------
+[114] cmd:cd srcs objs cmdend
+bash: line 1: cd: too many arguments
+[114]------------------------
+[115] cmd:cd srcs cmdend
+bash: line 1: cd: srcs: No such file or directory
+[115]------------------------
+[116] cmd:cd "srcs" cmdend
+bash: line 1: cd: srcs: No such file or directory
+[116]------------------------
+[117] cmd:cd /etc cmdend
+[117]------------------------
+[118] cmd:cd /etc cmdend
+[118]------------------------
+[119] cmd:cd /e"tc" cmdend
+[119]------------------------
+[120] cmd:cd sr cmdend
+bash: line 1: cd: sr: No such file or directory
+[120]------------------------
+[121] cmd:cd Makefile cmdend
+bash: line 1: cd: Makefile: Not a directory
+[121]------------------------
+[122] cmd:cd ../minishell cmdend
+bash: line 1: cd: ../minishell: Not a directory
+[122]------------------------
+[123] cmd:cd ../../../../../../.. cmdend
+[123]------------------------
+[124] cmd:cd .././../.././../bin/ls cmdend
+bash: line 1: cd: .././../.././../bin/ls: No such file or directory
+[124]------------------------
+[125] cmd:cd / cmdend
+[125]------------------------
+[126] cmd:cd / cmdend
+[126]------------------------
+[127] cmd:cd // cmdend
+[127]------------------------
+[128] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[128]------------------------
+[129] cmd:cd // cmdend
+[129]------------------------
+[130] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[130]------------------------
+[131] cmd:cd /// cmdend
+[131]------------------------
+[132] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[132]------------------------
+[133] cmd:cd //////// cmdend
+[133]------------------------
+[134] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[134]------------------------
+[135] cmd:cd //////// cmdend
+[135]------------------------
+[136] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[136]------------------------
+[137] cmd:cd /minishell cmdend
+bash: line 1: cd: /minishell: No such file or directory
+[137]------------------------
+[138] cmd:cd / cmdend
+[138]------------------------
+[139] cmd:cd .. cmdend
+[139]------------------------
+[140] cmd:cd _ cmdend
+bash: line 1: cd: _: No such file or directory
+[140]------------------------
+[141] cmd:cd - cmdend
+/home/jmeli/A/minishell/20250322/src/Pipes
+[141]------------------------
+[142] cmd:cd -- cmdend
+[142]------------------------
+[143] cmd:cd --- cmdend
+bash: line 1: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+[143]------------------------
+[144] cmd:cd $HOME cmdend
+[144]------------------------
+[145] cmd:cd $HOME $HOME cmdend
+bash: line 1: cd: too many arguments
+[145]------------------------
+[146] cmd:cd $HOME/42_works cmdend
+bash: line 1: cd: /home/jmeli/42_works: No such file or directory
+[146]------------------------
+[147] cmd:cd "$PWD/srcs" cmdend
+bash: line 1: cd: /home/jmeli/A/minishell/20250322/srcs: No such file or directory
+[147]------------------------
+[148] cmd:cd /home/jmeli/A/minishell/20250322/srcs cmdend
+bash: line 1: cd: /home/jmeli/A/minishell/20250322/srcs: No such file or directory
+[148]------------------------
+[149] cmd:unset HOME cmdend
+[149]------------------------
+[150] cmd:cd $HOME cmdend
+[150]------------------------
+[151] cmd:unset HOME cmdend
+[151]------------------------
+[152] cmd:export HOME= cmdend
+[152]------------------------
+[153] cmd:cd cmdend
+[153]------------------------
+[154] cmd:unset HOME cmdend
+[154]------------------------
+[155] cmd:export HOME cmdend
+[155]------------------------
+[156] cmd:cd cmdend
+[156]------------------------
+[157] cmd:cd minishell Docs crashtest.c cmdend
+bash: line 1: cd: too many arguments
+[157]------------------------
+[158] cmd:cd / | echo $? cmdend
+0
+[158]------------------------
+[159] cmd:pwd cmdend
+/home/jmeli/A/minishell/20250322
+[159]------------------------

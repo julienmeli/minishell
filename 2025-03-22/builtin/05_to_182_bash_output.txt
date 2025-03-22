@@ -1,0 +1,556 @@
+[1] cmd:! cmdend
+[1]------------------------
+[2] cmd:> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `>'
+[2]------------------------
+[3] cmd:< cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `<'
+[3]------------------------
+[4] cmd:>> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `>>'
+[4]------------------------
+[5] cmd:<< cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `<<'
+[5]------------------------
+[6] cmd:<> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `<>'
+[6]------------------------
+[7] cmd:>>>>> cmdend
+bash: line 1: syntax error near unexpected token `>>'
+bash: line 1: `>>>>>'
+[7]------------------------
+[8] cmd:>>>>>>>>>>>>>>> cmdend
+bash: line 1: syntax error near unexpected token `>>'
+bash: line 1: `>>>>>>>>>>>>>>>'
+[8]------------------------
+[9] cmd:<<<<< cmdend
+bash: line 1: syntax error near unexpected token `<<'
+bash: line 1: `<<<<<'
+[9]------------------------
+[10] cmd:<<<<<<<<<<<<<<<< cmdend
+bash: line 1: syntax error near unexpected token `<<<'
+bash: line 1: `<<<<<<<<<<<<<<<<'
+[10]------------------------
+[11] cmd:> > > > cmdend
+bash: line 1: syntax error near unexpected token `>'
+bash: line 1: `> > > >'
+[11]------------------------
+[12] cmd:>> >> >> >> cmdend
+bash: line 1: syntax error near unexpected token `>>'
+bash: line 1: `>> >> >> >>'
+[12]------------------------
+[13] cmd:>>>> >> >> >> cmdend
+bash: line 1: syntax error near unexpected token `>>'
+bash: line 1: `>>>> >> >> >>'
+[13]------------------------
+[14] cmd:/ cmdend
+bash: line 1: /: Is a directory
+[14]------------------------
+[15] cmd:// cmdend
+bash: line 1: //: Is a directory
+[15]------------------------
+[16] cmd:/. cmdend
+bash: line 1: /.: Is a directory
+[16]------------------------
+[17] cmd:/./../../../../.. cmdend
+bash: line 1: /./../../../../..: Is a directory
+[17]------------------------
+[18] cmd://///// cmdend
+bash: line 1: ///////: Is a directory
+[18]------------------------
+[19] cmd:- cmdend
+bash: line 1: -: command not found
+[19]------------------------
+[20] cmd:| cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `|'
+[20]------------------------
+[21] cmd:| hola cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `| hola'
+[21]------------------------
+[22] cmd:| | | cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `| | |'
+[22]------------------------
+[23] cmd:|| cmdend
+bash: line 1: syntax error near unexpected token `||'
+bash: line 1: `||'
+[23]------------------------
+[24] cmd:||||| cmdend
+bash: line 1: syntax error near unexpected token `||'
+bash: line 1: `|||||'
+[24]------------------------
+[25] cmd:||||||||||||| cmdend
+bash: line 1: syntax error near unexpected token `||'
+bash: line 1: `|||||||||||||'
+[25]------------------------
+[26] cmd:>>|>< cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `>>|><'
+[26]------------------------
+[27] cmd:&& cmdend
+bash: line 1: syntax error near unexpected token `&&'
+bash: line 1: `&&'
+[27]------------------------
+[28] cmd:&&&&& cmdend
+bash: line 1: syntax error near unexpected token `&&'
+bash: line 1: `&&&&&'
+[28]------------------------
+[29] cmd:&&&&&&&&&&&&&& cmdend
+bash: line 1: syntax error near unexpected token `&&'
+bash: line 1: `&&&&&&&&&&&&&&'
+[29]------------------------
+[30] cmd:;; cmdend
+bash: line 1: syntax error near unexpected token `;;'
+bash: line 1: `;;'
+[30]------------------------
+[31] cmd:;;;;; cmdend
+bash: line 1: syntax error near unexpected token `;;'
+bash: line 1: `;;;;;'
+[31]------------------------
+[32] cmd:;;;;;;;;;;;;;;; cmdend
+bash: line 1: syntax error near unexpected token `;;'
+bash: line 1: `;;;;;;;;;;;;;;;'
+[32]------------------------
+[33] cmd:() cmdend
+bash: line 1: syntax error near unexpected token `)'
+bash: line 1: `()'
+[33]------------------------
+[34] cmd:( ( ) ) cmdend
+bash: line 1: syntax error near unexpected token `)'
+bash: line 1: `( ( ) )'
+[34]------------------------
+[35] cmd:( ( ( ( ) ) ) ) cmdend
+bash: line 1: syntax error near unexpected token `)'
+bash: line 1: `( ( ( ( ) ) ) )'
+[35]------------------------
+[36] cmd:"hola" cmdend
+bash: line 1: hola: command not found
+[36]------------------------
+[37] cmd:hola
+ cmdend
+bash: line 1: hola: command not found
+[37]------------------------
+[38] cmd:* cmdend
+bash: line 1: 05_to_182_bash_output.txt: command not found
+[38]------------------------
+[39] cmd:*/* cmdend
+bash: line 1: gnl/get_next_line.c: Permission denied
+[39]------------------------
+[40] cmd:*/* cmdend
+bash: line 1: gnl/get_next_line.c: Permission denied
+[40]------------------------
+[41] cmd:. cmdend
+bash: line 1: .: filename argument required
+.: usage: . filename [arguments]
+[41]------------------------
+[42] cmd:.. cmdend
+bash: line 1: ..: command not found
+[42]------------------------
+[43] cmd:~ cmdend
+bash: line 1: /home/jmeli: Is a directory
+[43]------------------------
+[44] cmd:ABC=hola cmdend
+[44]------------------------
+[45] cmd:4ABC=hola cmdend
+bash: line 1: 4ABC=hola: command not found
+[45]------------------------
+[46] cmd:hola cmdend
+bash: line 1: hola: command not found
+[46]------------------------
+[47] cmd:hola que tal cmdend
+bash: line 1: hola: command not found
+[47]------------------------
+[48] cmd:Makefile cmdend
+bash: line 1: Makefile: command not found
+[48]------------------------
+[49] cmd:echo cmdend
+
+[49]------------------------
+[50] cmd:echo -n cmdend
+[50]------------------------
+[51] cmd:echo Hola cmdend
+Hola
+[51]------------------------
+[52] cmd:echoHola cmdend
+bash: line 1: echoHola: command not found
+[52]------------------------
+[53] cmd:echo-nHola cmdend
+bash: line 1: echo-nHola: command not found
+[53]------------------------
+[54] cmd:echo -n Hola cmdend
+Hola[54]------------------------
+[55] cmd:echo "-n" Hola cmdend
+Hola[55]------------------------
+[56] cmd:echo -nHola cmdend
+-nHola
+[56]------------------------
+[57] cmd:echo Hola -n cmdend
+Hola -n
+[57]------------------------
+[58] cmd:echo Hola Que Tal cmdend
+Hola Que Tal
+[58]------------------------
+[59] cmd:echo Hola cmdend
+Hola
+[59]------------------------
+[60] cmd:echo Hola Que Tal cmdend
+Hola Que Tal
+[60]------------------------
+[61] cmd:echo \n hola cmdend
+n hola
+[61]------------------------
+[62] cmd:echo "       " | cat -e cmdend
+       $
+[62]------------------------
+[63] cmd:echo | cat -e cmdend
+$
+[63]------------------------
+[64] cmd:""echo hola"" que"" tal"" cmdend
+hola que tal
+[64]------------------------
+[65] cmd:echo -n -n cmdend
+[65]------------------------
+[66] cmd:echo -n -n Hola Que cmdend
+Hola Que[66]------------------------
+[67] cmd:echo -p cmdend
+-p
+[67]------------------------
+[68] cmd:echo -nnnnn cmdend
+[68]------------------------
+[69] cmd:echo -n -nnn -nnnn cmdend
+[69]------------------------
+[70] cmd:echo -n-nnn -nnnn cmdend
+-n-nnn -nnnn
+[70]------------------------
+[71] cmd:echo -n -nnn hola -nnnn cmdend
+hola -nnnn[71]------------------------
+[72] cmd:echo -n -nnn-nnnn cmdend
+-nnn-nnnn[72]------------------------
+[73] cmd:echo --------n cmdend
+--------n
+[73]------------------------
+[74] cmd:echo -nnn --------n cmdend
+--------n[74]------------------------
+[75] cmd:echo -nnn -----nn---nnnn cmdend
+-----nn---nnnn[75]------------------------
+[76] cmd:echo -nnn --------nnnn cmdend
+--------nnnn[76]------------------------
+[77] cmd:echo $ cmdend
+$
+[77]------------------------
+[78] cmd:echo $? cmdend
+0
+[78]------------------------
+[79] cmd:echo $?$ cmdend
+0$
+[79]------------------------
+[80] cmd:echo $? | echo $? | echo $? cmdend
+0
+[80]------------------------
+[81] cmd:echo $:$= | cat -e cmdend
+$:$=$
+[81]------------------------
+[82] cmd:echo " $ " | cat -e cmdend
+ $ $
+[82]------------------------
+[83] cmd:echo  cmdend
+
+[83]------------------------
+[84] cmd:$ cmdend
+bash: line 1: $: command not found
+[84]------------------------
+[85] cmd: | cat -e cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: ` | cat -e'
+[85]------------------------
+[86] cmd:echo $HOME cmdend
+/home/jmeli
+[86]------------------------
+[87] cmd:echo \$HOME cmdend
+$HOME
+[87]------------------------
+[88] cmd:echo my shit terminal is [$TERM] cmdend
+my shit terminal is [xterm-256color]
+[88]------------------------
+[89] cmd:echo my shit terminal is [$TERM4 cmdend
+my shit terminal is [
+[89]------------------------
+[90] cmd:echo my shit terminal is [$TERM4] cmdend
+my shit terminal is []
+[90]------------------------
+[91] cmd:echo $UID cmdend
+101299
+[91]------------------------
+[92] cmd:echo $HOME9 cmdend
+
+[92]------------------------
+[93] cmd:echo $9HOME cmdend
+HOME
+[93]------------------------
+[94] cmd:echo $HOME% cmdend
+/home/jmeli%
+[94]------------------------
+[95] cmd:echo $UID$HOME cmdend
+101299/home/jmeli
+[95]------------------------
+[96] cmd:echo Le path de mon HOME est $HOME cmdend
+Le path de mon HOME est /home/jmeli
+[96]------------------------
+[97] cmd:echo $USER$var\$USER$USER\$USERtest$USER cmdend
+jmeli$USERjmeli$USERtestjmeli
+[97]------------------------
+[98] cmd:echo $hola* cmdend
+bonjour*
+[98]------------------------
+[99] cmd:echo -nnnn $hola cmdend
+bonjour[99]------------------------
+[100] cmd:echo > < cmdend
+bash: line 1: syntax error near unexpected token `<'
+bash: line 1: `echo > <'
+[100]------------------------
+[101] cmd:echo | | cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `echo | |'
+[101]------------------------
+[102] cmd:EechoE cmdend
+bash: line 1: EechoE: command not found
+[102]------------------------
+[103] cmd:.echo. cmdend
+bash: line 1: .echo.: command not found
+[103]------------------------
+[104] cmd:>echo> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `>echo>'
+[104]------------------------
+[105] cmd:<echo< cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `<echo<'
+[105]------------------------
+[106] cmd:>>echo>> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `>>echo>>'
+[106]------------------------
+[107] cmd:|echo| cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `|echo|'
+[107]------------------------
+[108] cmd:|echo -n hola cmdend
+bash: line 1: syntax error near unexpected token `|'
+bash: line 1: `|echo -n hola'
+[108]------------------------
+[109] cmd:echo * cmdend
+05_to_182_bash_output.txt gnl include libft main.c main.o Makefile minishell src tester_05_to_182.sh tester_183_to_297.sh tester_298_to_417.sh tester_424_to_548.sh tester_614_to_708.sh
+[109]------------------------
+[110] cmd:echo * cmdend
+05_to_182_bash_output.txt gnl include libft main.c main.o Makefile minishell src tester_05_to_182.sh tester_183_to_297.sh tester_298_to_417.sh tester_424_to_548.sh tester_614_to_708.sh
+[110]------------------------
+[111] cmd:echo D* cmdend
+D*
+[111]------------------------
+[112] cmd:echo *Z cmdend
+*Z
+[112]------------------------
+[113] cmd:echo *t hola cmdend
+05_to_182_bash_output.txt libft hola
+[113]------------------------
+[114] cmd:echo *t cmdend
+05_to_182_bash_output.txt libft
+[114]------------------------
+[115] cmd:echo $* cmdend
+
+[115]------------------------
+[116] cmd:echo hola*hola * cmdend
+hola*hola 05_to_182_bash_output.txt gnl include libft main.c main.o Makefile minishell src tester_05_to_182.sh tester_183_to_297.sh tester_298_to_417.sh tester_424_to_548.sh tester_614_to_708.sh
+[116]------------------------
+[117] cmd:echo $hola* cmdend
+bonjour*
+[117]------------------------
+[118] cmd:echo $HOME* cmdend
+/home/jmeli
+[118]------------------------
+[119] cmd:echo $"" cmdend
+
+[119]------------------------
+[120] cmd:echo "$""" cmdend
+$
+[120]------------------------
+[121] cmd:echo  cmdend
+
+[121]------------------------
+[122] cmd:echo $"HOME" cmdend
+HOME
+[122]------------------------
+[123] cmd:echo $HOME cmdend
+/home/jmeli
+[123]------------------------
+[124] cmd:echo $""HOME cmdend
+HOME
+[124]------------------------
+[125] cmd:echo "$HO"ME cmdend
+ME
+[125]------------------------
+[126] cmd:echo ME cmdend
+ME
+[126]------------------------
+[127] cmd:echo "$HO""ME" cmdend
+ME
+[127]------------------------
+[128] cmd:echo ME cmdend
+ME
+[128]------------------------
+[129] cmd:echo "ME" cmdend
+ME
+[129]------------------------
+[130] cmd:echo ""$HOME cmdend
+/home/jmeli
+[130]------------------------
+[131] cmd:echo "" $HOME cmdend
+ /home/jmeli
+[131]------------------------
+[132] cmd:echo $HOME cmdend
+/home/jmeli
+[132]------------------------
+[133] cmd:echo  $HOME cmdend
+/home/jmeli
+[133]------------------------
+[134] cmd:echo $"HO""ME" cmdend
+HOME
+[134]------------------------
+[135] cmd:echo $HOME cmdend
+/home/jmeli
+[135]------------------------
+[136] cmd:echo $HOME cmdend
+/home/jmeli
+[136]------------------------
+[137] cmd:echo "$"HOME cmdend
+$HOME
+[137]------------------------
+[138] cmd:echo $=HOME cmdend
+$=HOME
+[138]------------------------
+[139] cmd:echo $"HOLA" cmdend
+HOLA
+[139]------------------------
+[140] cmd:echo $HOLA cmdend
+
+[140]------------------------
+[141] cmd:echo $DONTEXIST Hola cmdend
+Hola
+[141]------------------------
+[142] cmd:echo "hola" cmdend
+hola
+[142]------------------------
+[143] cmd:echo hola cmdend
+hola
+[143]------------------------
+[144] cmd:echo hola cmdend
+hola
+[144]------------------------
+[145] cmd:echo hola cmdend
+hola
+[145]------------------------
+[146] cmd:echo "hola" cmdend
+hola
+[146]------------------------
+[147] cmd:echo "h'o'la" cmdend
+h'o'la
+[147]------------------------
+[148] cmd:echo"hola" cmdend
+bash: line 1: echohola: command not found
+[148]------------------------
+[149] cmd:echo "hola" cmdend
+hola
+[149]------------------------
+[150] cmd:echo hola cmdend
+hola
+[150]------------------------
+[151] cmd:echo ho''''la cmdend
+hola
+[151]------------------------
+[152] cmd:echo hola"""""""""""" cmdend
+hola
+[152]------------------------
+[153] cmd:echo hola"" cmdend
+hola
+[153]------------------------
+[154] cmd:echo hola cmdend
+hola
+[154]------------------------
+[155] cmd:echo hola cmdend
+hola
+[155]------------------------
+[156] cmd:e"cho hola" cmdend
+bash: line 1: echo hola: command not found
+[156]------------------------
+[157] cmd:echo cmdend
+
+[157]------------------------
+[158] cmd:hola cmdend
+bash: line 1: hola: command not found
+[158]------------------------
+[159] cmd:echo "hola " | cat -e cmdend
+hola $
+[159]------------------------
+[160] cmd:echo ""hola cmdend
+hola
+[160]------------------------
+[161] cmd:echo "" hola cmdend
+ hola
+[161]------------------------
+[162] cmd:echo ""                     hola cmdend
+ hola
+[162]------------------------
+[163] cmd:echo ""hola cmdend
+hola
+[163]------------------------
+[164] cmd:echo "" hola cmdend
+ hola
+[164]------------------------
+[165] cmd:echo hola""bonjour cmdend
+holabonjour
+[165]------------------------
+[166] cmd:"echo b"o"nj"o"ur cmdend
+bash: line 1: unexpected EOF while looking for matching `"'
+bash: line 2: syntax error: unexpected end of file
+[166]------------------------
+[167] cmd:""e"cho b"o"nj"o"ur" cmdend
+bash: line 1: echo bonjour: command not found
+[167]------------------------
+[168] cmd:echo "$DONTEXIST"Makefile cmdend
+Makefile
+[168]------------------------
+[169] cmd:echo "$DONTEXIST""Makefile" cmdend
+Makefile
+[169]------------------------
+[170] cmd:echo "$DONTEXIST" "Makefile" cmdend
+ Makefile
+[170]------------------------
+[171] cmd:$? cmdend
+bash: line 1: 0: command not found
+[171]------------------------
+[172] cmd:$?$? cmdend
+bash: line 1: 00: command not found
+[172]------------------------
+[173] cmd:?$HOME cmdend
+bash: line 1: ?/home/jmeli: No such file or directory
+[173]------------------------
+[174] cmd:$ cmdend
+bash: line 1: $: command not found
+[174]------------------------
+[175] cmd:$HOME cmdend
+bash: line 1: /home/jmeli: Is a directory
+[175]------------------------
+[176] cmd:$HOMEdskjhfkdshfsd cmdend
+[176]------------------------
+[177] cmd:$HOMEdskjhfkdshfsd cmdend
+[177]------------------------
+[178] cmd:$HOMEdskjhfkdshfsd
+ cmdend
+[178]------------------------

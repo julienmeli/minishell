@@ -1,0 +1,1252 @@
+[1] cmd:echo hola > bonjour cmdend
+[1]------------------------
+[2] cmd:cat bonjour cmdend
+hola
+[2]------------------------
+[3] cmd:echo que tal >> bonjour cmdend
+[3]------------------------
+[4] cmd:cat bonjour cmdend
+hola
+que tal
+[4]------------------------
+[5] cmd:echo hola > bonjour cmdend
+[5]------------------------
+[6] cmd:echo que tal >> bonjour cmdend
+[6]------------------------
+[7] cmd:cat < bonjour cmdend
+hola
+que tal
+[7]------------------------
+[8] cmd:echo hola > bonjour cmdend
+[8]------------------------
+[9] cmd:rm bonjour cmdend
+[9]------------------------
+[10] cmd:echo que tal >> bonjour cmdend
+[10]------------------------
+[11] cmd:cat < bonjour cmdend
+que tal
+[11]------------------------
+[12] cmd:echo hola que tal > bonjour cmdend
+[12]------------------------
+[13] cmd:cat bonjour cmdend
+hola que tal
+[13]------------------------
+[14] cmd:echo hola que tal > /tmp/bonjour cmdend
+[14]------------------------
+[15] cmd:cat -e /tmp/bonjour cmdend
+hola que tal$
+[15]------------------------
+[16] cmd:export HOLA=hey cmdend
+[16]------------------------
+[17] cmd:echo bonjour > $HOLA cmdend
+bash: line 1: $HOLA: ambiguous redirect
+[17]------------------------
+[18] cmd:echo $HOLA cmdend
+
+[18]------------------------
+[19] cmd:whereis grep > Docs/bonjour cmdend
+bash: line 1: Docs/bonjour: No such file or directory
+[19]------------------------
+[20] cmd:cat Docs/bonjour cmdend
+cat: Docs/bonjour: No such file or directory
+[20]------------------------
+[21] cmd:ls -la > Docs/bonjour cmdend
+bash: line 1: Docs/bonjour: No such file or directory
+[21]------------------------
+[22] cmd:cat Docs/bonjour cmdend
+cat: Docs/bonjour: No such file or directory
+[22]------------------------
+[23] cmd:pwd>bonjour cmdend
+[23]------------------------
+[24] cmd:cat bonjour cmdend
+/home/jmeli/A/minishell/20250322
+[24]------------------------
+[25] cmd:pwd >                     bonjour cmdend
+[25]------------------------
+[26] cmd:cat bonjour cmdend
+/home/jmeli/A/minishell/20250322
+[26]------------------------
+[27] cmd:echo hola > > bonjour cmdend
+bash: line 1: syntax error near unexpected token `>'
+bash: line 1: `echo hola > > bonjour'
+[27]------------------------
+[28] cmd:echo hola < < bonjour cmdend
+bash: line 1: syntax error near unexpected token `<'
+bash: line 1: `echo hola < < bonjour'
+[28]------------------------
+[29] cmd:echo hola >>> bonjour cmdend
+bash: line 1: syntax error near unexpected token `>'
+bash: line 1: `echo hola >>> bonjour'
+[29]------------------------
+[30] cmd:> bonjour echo hola cmdend
+[30]------------------------
+[31] cmd:cat bonjour cmdend
+hola
+[31]------------------------
+[32] cmd:> bonjour | echo hola cmdend
+hola
+[32]------------------------
+[33] cmd:cat bonjour cmdend
+[33]------------------------
+[34] cmd:prout hola > bonjour cmdend
+bash: line 1: prout: command not found
+[34]------------------------
+[35] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hola
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[35]------------------------
+[36] cmd:echo hola > hello >> hello >> hello cmdend
+[36]------------------------
+[37] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hello
+hola
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[37]------------------------
+[38] cmd:cat hello cmdend
+hola
+[38]------------------------
+[39] cmd:echo hola > hello >> hello >> hello cmdend
+[39]------------------------
+[40] cmd:echo hola >> hello cmdend
+[40]------------------------
+[41] cmd:cat < hello cmdend
+hola
+hola
+[41]------------------------
+[42] cmd:echo hola > hello >> hello >> hello cmdend
+[42]------------------------
+[43] cmd:echo hola >> hello cmdend
+[43]------------------------
+[44] cmd:echo hola > hello >> hello >> hello cmdend
+[44]------------------------
+[45] cmd:cat < hello cmdend
+hola
+[45]------------------------
+[46] cmd:echo hola >> hello >> hello > hello cmdend
+[46]------------------------
+[47] cmd:echo hola >> hello cmdend
+[47]------------------------
+[48] cmd:cat < hello cmdend
+hola
+hola
+[48]------------------------
+[49] cmd:echo hola >> hello >> hello > hello cmdend
+[49]------------------------
+[50] cmd:echo hola >> hello cmdend
+[50]------------------------
+[51] cmd:echo hola >> hello >> hello > hello cmdend
+[51]------------------------
+[52] cmd:cat < hello cmdend
+hola
+[52]------------------------
+[53] cmd:echo hola > hello cmdend
+[53]------------------------
+[54] cmd:echo hola >> hello >> hello >> hello cmdend
+[54]------------------------
+[55] cmd:echo hola >> hello cmdend
+[55]------------------------
+[56] cmd:cat < hello cmdend
+hola
+hola
+hola
+[56]------------------------
+[57] cmd:echo hola > hello cmdend
+[57]------------------------
+[58] cmd:echo hey > bonjour cmdend
+[58]------------------------
+[59] cmd:echo <bonjour <hello cmdend
+
+[59]------------------------
+[60] cmd:echo hola > hello cmdend
+[60]------------------------
+[61] cmd:echo hey > bonjour cmdend
+[61]------------------------
+[62] cmd:echo <hello <bonjour cmdend
+
+[62]------------------------
+[63] cmd:echo hola > bonjour cmdend
+[63]------------------------
+[64] cmd:echo hey > hello cmdend
+[64]------------------------
+[65] cmd:rm bonjour hello cmdend
+[65]------------------------
+[66] cmd:echo hola > bonjour > hello > bonjour cmdend
+[66]------------------------
+[67] cmd:cat bonjour cmdend
+hola
+[67]------------------------
+[68] cmd:cat hello cmdend
+[68]------------------------
+[69] cmd:echo hola > bonjour cmdend
+[69]------------------------
+[70] cmd:echo hey > hello cmdend
+[70]------------------------
+[71] cmd:echo hola > bonjour > hello > bonjour cmdend
+[71]------------------------
+[72] cmd:cat bonjour cmdend
+hola
+[72]------------------------
+[73] cmd:cat hello cmdend
+[73]------------------------
+[74] cmd:echo hola > bonjour cmdend
+[74]------------------------
+[75] cmd:echo hey > hello cmdend
+[75]------------------------
+[76] cmd:rm bonjour hello cmdend
+[76]------------------------
+[77] cmd:echo hola > bonjour >> hello > bonjour cmdend
+[77]------------------------
+[78] cmd:cat bonjour cmdend
+hola
+[78]------------------------
+[79] cmd:cat hello cmdend
+[79]------------------------
+[80] cmd:echo hola > bonjour cmdend
+[80]------------------------
+[81] cmd:echo hey > hello cmdend
+[81]------------------------
+[82] cmd:echo hola > bonjour > hello > bonjour cmdend
+[82]------------------------
+[83] cmd:cat bonjour cmdend
+hola
+[83]------------------------
+[84] cmd:cat hello cmdend
+[84]------------------------
+[85] cmd:echo hola > bonjour cmdend
+[85]------------------------
+[86] cmd:echo hey > hello cmdend
+[86]------------------------
+[87] cmd:rm bonjour hello cmdend
+[87]------------------------
+[88] cmd:echo hola > bonjour > hello >> bonjour cmdend
+[88]------------------------
+[89] cmd:cat bonjour cmdend
+hola
+[89]------------------------
+[90] cmd:cat hello cmdend
+[90]------------------------
+[91] cmd:echo hola > bonjour cmdend
+[91]------------------------
+[92] cmd:echo hey > hello cmdend
+[92]------------------------
+[93] cmd:echo hola > bonjour > hello >> bonjour cmdend
+[93]------------------------
+[94] cmd:cat bonjour cmdend
+hola
+[94]------------------------
+[95] cmd:cat hello cmdend
+[95]------------------------
+[96] cmd:echo hola > bonjour cmdend
+[96]------------------------
+[97] cmd:echo hey > hello cmdend
+[97]------------------------
+[98] cmd:rm bonjour hello cmdend
+[98]------------------------
+[99] cmd:echo hola >> bonjour > hello > bonjour cmdend
+[99]------------------------
+[100] cmd:cat bonjour cmdend
+hola
+[100]------------------------
+[101] cmd:cat hello cmdend
+[101]------------------------
+[102] cmd:echo hola > bonjour cmdend
+[102]------------------------
+[103] cmd:echo hey > hello cmdend
+[103]------------------------
+[104] cmd:echo hola >> bonjour > hello > bonjour cmdend
+[104]------------------------
+[105] cmd:cat bonjour cmdend
+hola
+[105]------------------------
+[106] cmd:cat hello cmdend
+[106]------------------------
+[107] cmd:echo hola > bonjour cmdend
+[107]------------------------
+[108] cmd:echo hey > hello cmdend
+[108]------------------------
+[109] cmd:rm bonjour hello cmdend
+[109]------------------------
+[110] cmd:echo hola >> bonjour >> hello >> bonjour cmdend
+[110]------------------------
+[111] cmd:cat bonjour cmdend
+hola
+[111]------------------------
+[112] cmd:cat hello cmdend
+[112]------------------------
+[113] cmd:echo hola > bonjour cmdend
+[113]------------------------
+[114] cmd:echo hey > hello cmdend
+[114]------------------------
+[115] cmd:echo hola >> bonjour >> hello >> bonjour cmdend
+[115]------------------------
+[116] cmd:cat bonjour cmdend
+hola
+hola
+[116]------------------------
+[117] cmd:cat hello cmdend
+hey
+[117]------------------------
+[118] cmd:> bonjour echo hola bonjour cmdend
+[118]------------------------
+[119] cmd:cat bonjour cmdend
+hola bonjour
+[119]------------------------
+[120] cmd:>bonjour echo > hola>bonjour>hola>>bonjour>hola hey >bonjour hola >hola cmdend
+[120]------------------------
+[121] cmd:cat bonjour cmdend
+[121]------------------------
+[122] cmd:cat hola cmdend
+hey hola
+[122]------------------------
+[123] cmd:echo bonjour > hola1 cmdend
+[123]------------------------
+[124] cmd:echo hello > hola2 cmdend
+[124]------------------------
+[125] cmd:echo 2 >hola1 >> hola2 cmdend
+[125]------------------------
+[126] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[126]------------------------
+[127] cmd:cat hola1 cmdend
+[127]------------------------
+[128] cmd:cat hola2 cmdend
+hello
+2
+[128]------------------------
+[129] cmd:echo bonjour > hola1 cmdend
+[129]------------------------
+[130] cmd:echo hello > hola2 cmdend
+[130]------------------------
+[131] cmd:echo 2 >>hola1 > hola2 cmdend
+[131]------------------------
+[132] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[132]------------------------
+[133] cmd:cat hola1 cmdend
+bonjour
+[133]------------------------
+[134] cmd:cat hola2 cmdend
+2
+[134]------------------------
+[135] cmd:> pwd cmdend
+[135]------------------------
+[136] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[136]------------------------
+[137] cmd:< pwd cmdend
+[137]------------------------
+[138] cmd:< Makefile . cmdend
+bash: line 1: .: filename argument required
+.: usage: . filename [arguments]
+[138]------------------------
+[139] cmd:cat <pwd cmdend
+[139]------------------------
+[140] cmd:cat <srcs/pwd cmdend
+bash: line 1: srcs/pwd: No such file or directory
+[140]------------------------
+[141] cmd:cat <../pwd cmdend
+bash: line 1: ../pwd: No such file or directory
+[141]------------------------
+[142] cmd:cat >> cmdend
+bash: line 1: syntax error near unexpected token `newline'
+bash: line 1: `cat >>'
+[142]------------------------
+[143] cmd:cat >>> cmdend
+bash: line 1: syntax error near unexpected token `>'
+bash: line 1: `cat >>>'
+[143]------------------------
+[144] cmd:cat >> << cmdend
+bash: line 1: syntax error near unexpected token `<<'
+bash: line 1: `cat >> <<'
+[144]------------------------
+[145] cmd:cat >> > >> << >> cmdend
+bash: line 1: syntax error near unexpected token `>'
+bash: line 1: `cat >> > >> << >>'
+[145]------------------------
+[146] cmd:cat < ls cmdend
+bash: line 1: ls: No such file or directory
+[146]------------------------
+[147] cmd:cat < ls > ls cmdend
+bash: line 1: ls: No such file or directory
+[147]------------------------
+[148] cmd:cat > ls1 < ls2 cmdend
+bash: line 1: ls2: No such file or directory
+[148]------------------------
+[149] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[149]------------------------
+[150] cmd:>>hola cmdend
+[150]------------------------
+[151] cmd:cat hola cmdend
+hey hola
+[151]------------------------
+[152] cmd:echo hola > bonjour cmdend
+[152]------------------------
+[153] cmd:cat < bonjour cmdend
+hola
+[153]------------------------
+[154] cmd:echo hola >bonjour cmdend
+[154]------------------------
+[155] cmd:cat <bonjour cmdend
+hola
+[155]------------------------
+[156] cmd:echo hola>bonjour cmdend
+[156]------------------------
+[157] cmd:cat<bonjour cmdend
+hola
+[157]------------------------
+[158] cmd:echo hola> bonjour cmdend
+[158]------------------------
+[159] cmd:cat< bonjour cmdend
+hola
+[159]------------------------
+[160] cmd:echo hola               >bonjour cmdend
+[160]------------------------
+[161] cmd:cat<                     bonjour cmdend
+hola
+[161]------------------------
+[162] cmd:echo hola          >     bonjour cmdend
+[162]------------------------
+[163] cmd:cat            <         bonjour cmdend
+hola
+[163]------------------------
+[164] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[164]------------------------
+[165] cmd:cat < srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[165]------------------------
+[166] cmd:echo hola >srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[166]------------------------
+[167] cmd:cat <srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[167]------------------------
+[168] cmd:echo hola > bonjour cmdend
+[168]------------------------
+[169] cmd:echo que tal >> bonjour cmdend
+[169]------------------------
+[170] cmd:cat < bonjour cmdend
+hola
+que tal
+[170]------------------------
+[171] cmd:echo hola > bonjour cmdend
+[171]------------------------
+[172] cmd:rm bonjour cmdend
+[172]------------------------
+[173] cmd:echo que tal >> bonjour cmdend
+[173]------------------------
+[174] cmd:cat < bonjour cmdend
+que tal
+[174]------------------------
+[175] cmd:ec"h"o hola > bonjour cmdend
+[175]------------------------
+[176] cmd:cat bo"n"jour cmdend
+hola
+[176]------------------------
+[177] cmd:echo hola > bonjour\ 1 cmdend
+[177]------------------------
+[178] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+bonjour 1
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[178]------------------------
+[179] cmd:cat bonjour\ 1 cmdend
+hola
+[179]------------------------
+[180] cmd:echo hola > bonjour hey cmdend
+[180]------------------------
+[181] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour
+bonjour 1
+c
+gnl
+hello
+hola
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[181]------------------------
+[182] cmd:cat bonjour cmdend
+hola hey
+[182]------------------------
+[183] cmd:cat hey cmdend
+cat: hey: No such file or directory
+[183]------------------------
+[184] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[184]------------------------
+[185] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[185]------------------------
+[186] cmd:>srcs/bonjour >srcs/hello <prout cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[186]------------------------
+[187] cmd:cat srcs/bonjour srcs/hello cmdend
+cat: srcs/bonjour: No such file or directory
+cat: srcs/hello: No such file or directory
+[187]------------------------
+[188] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[188]------------------------
+[189] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[189]------------------------
+[190] cmd:rm srcs/bonjour srcs/hello cmdend
+rm: cannot remove 'srcs/bonjour': No such file or directory
+rm: cannot remove 'srcs/hello': No such file or directory
+[190]------------------------
+[191] cmd:>srcs/bonjour >srcs/hello <prout cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[191]------------------------
+[192] cmd:ls srcs cmdend
+ls: cannot access 'srcs': No such file or directory
+[192]------------------------
+[193] cmd:cat srcs/bonjour srcs/hello cmdend
+cat: srcs/bonjour: No such file or directory
+cat: srcs/hello: No such file or directory
+[193]------------------------
+[194] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[194]------------------------
+[195] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[195]------------------------
+[196] cmd:>srcs/bonjour <prout >srcs/hello  cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[196]------------------------
+[197] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[197]------------------------
+[198] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[198]------------------------
+[199] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[199]------------------------
+[200] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[200]------------------------
+[201] cmd:rm srcs/bonjour srcs/hello cmdend
+rm: cannot remove 'srcs/bonjour': No such file or directory
+rm: cannot remove 'srcs/hello': No such file or directory
+[201]------------------------
+[202] cmd:>srcs/bonjour <prout >srcs/hello  cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[202]------------------------
+[203] cmd:ls srcs cmdend
+ls: cannot access 'srcs': No such file or directory
+[203]------------------------
+[204] cmd:cat srcs/bonjour cmdend
+cat: srcs/bonjour: No such file or directory
+[204]------------------------
+[205] cmd:echo hola > ../bonjour cmdend
+[205]------------------------
+[206] cmd:echo hey > ../hello cmdend
+[206]------------------------
+[207] cmd:>../bonjour >../hello <prout cmdend
+bash: line 1: prout: No such file or directory
+[207]------------------------
+[208] cmd:cat ../bonjour ../hello cmdend
+[208]------------------------
+[209] cmd:echo hola > ../bonjour cmdend
+[209]------------------------
+[210] cmd:echo hey > ../hello cmdend
+[210]------------------------
+[211] cmd:rm ../bonjour ../hello cmdend
+[211]------------------------
+[212] cmd:>../bonjour >../hello <prout cmdend
+bash: line 1: prout: No such file or directory
+[212]------------------------
+[213] cmd:ls .. cmdend
+0_minishell_qui_marche
+20250207
+20250305
+20250306
+20250307
+20250310
+20250311
+20250322
+bonjour
+builtin
+builtin_tests
+delimiter.c
+delimiter.o
+ex0
+ex1_errno
+executable.c
+executable.o
+ft_split2.c
+ft_split2.o
+ft_strcmp.c
+ft_strcmp.o
+hello
+heredoc.c
+heredoc.o
+jshell_tester_2.sh
+jshell_tester.sh
+libft
+libminishell.a
+log_42.txt
+Makefile
+minishell
+minishell_2
+minishell.c
+minishell.h
+minishell.o
+minitester-minishell-tester
+z_rate
+[213]------------------------
+[214] cmd:cat ../bonjour ../hello cmdend
+[214]------------------------
+[215] cmd:echo hola > ../bonjour cmdend
+[215]------------------------
+[216] cmd:echo hey > ../hello cmdend
+[216]------------------------
+[217] cmd:>../bonjour <prout >../hello  cmdend
+bash: line 1: prout: No such file or directory
+[217]------------------------
+[218] cmd:cat ../bonjour  cmdend
+[218]------------------------
+[219] cmd:cat ../hello cmdend
+hey
+[219]------------------------
+[220] cmd:echo hola > ../bonjour cmdend
+[220]------------------------
+[221] cmd:echo hey > ../hello cmdend
+[221]------------------------
+[222] cmd:rm ../bonjour ../hello cmdend
+[222]------------------------
+[223] cmd:>../bonjour <prout >../hello  cmdend
+bash: line 1: prout: No such file or directory
+[223]------------------------
+[224] cmd:ls .. cmdend
+0_minishell_qui_marche
+20250207
+20250305
+20250306
+20250307
+20250310
+20250311
+20250322
+bonjour
+builtin
+builtin_tests
+delimiter.c
+delimiter.o
+ex0
+ex1_errno
+executable.c
+executable.o
+ft_split2.c
+ft_split2.o
+ft_strcmp.c
+ft_strcmp.o
+heredoc.c
+heredoc.o
+jshell_tester_2.sh
+jshell_tester.sh
+libft
+libminishell.a
+log_42.txt
+Makefile
+minishell
+minishell_2
+minishell.c
+minishell.h
+minishell.o
+minitester-minishell-tester
+z_rate
+[224]------------------------
+[225] cmd:cat ../bonjour cmdend
+[225]------------------------
+[226] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[226]------------------------
+[227] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[227]------------------------
+[228] cmd:>srcs/bonjour >>srcs/hello <prout cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[228]------------------------
+[229] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[229]------------------------
+[230] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[230]------------------------
+[231] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[231]------------------------
+[232] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[232]------------------------
+[233] cmd:>>srcs/bonjour >srcs/hello <prout cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[233]------------------------
+[234] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[234]------------------------
+[235] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[235]------------------------
+[236] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[236]------------------------
+[237] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[237]------------------------
+[238] cmd:>>srcs/bonjour >>srcs/hello <prout cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[238]------------------------
+[239] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[239]------------------------
+[240] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[240]------------------------
+[241] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[241]------------------------
+[242] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[242]------------------------
+[243] cmd:>srcs/bonjour <prout >>srcs/hello cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[243]------------------------
+[244] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[244]------------------------
+[245] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[245]------------------------
+[246] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[246]------------------------
+[247] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[247]------------------------
+[248] cmd:>>srcs/bonjour <prout >srcs/hello cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[248]------------------------
+[249] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[249]------------------------
+[250] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[250]------------------------
+[251] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[251]------------------------
+[252] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[252]------------------------
+[253] cmd:>>srcs/bonjour <prout >>srcs/hello cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[253]------------------------
+[254] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[254]------------------------
+[255] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[255]------------------------
+[256] cmd:echo hola > srcs/bonjour cmdend
+bash: line 1: srcs/bonjour: No such file or directory
+[256]------------------------
+[257] cmd:echo hey > srcs/hello cmdend
+bash: line 1: srcs/hello: No such file or directory
+[257]------------------------
+[258] cmd:<prout >>srcs/bonjour >>srcs/hello cmdend
+bash: line 1: prout: No such file or directory
+[258]------------------------
+[259] cmd:cat srcs/bonjour  cmdend
+cat: srcs/bonjour: No such file or directory
+[259]------------------------
+[260] cmd:cat srcs/hello cmdend
+cat: srcs/hello: No such file or directory
+[260]------------------------
+[261] cmd:echo hola > bonjour cmdend
+[261]------------------------
+[262] cmd:echo hey > hello cmdend
+[262]------------------------
+[263] cmd:<bonjour >hello cmdend
+[263]------------------------
+[264] cmd:cat bonjour  cmdend
+hola
+[264]------------------------
+[265] cmd:cat hello cmdend
+[265]------------------------
+[266] cmd:echo hola > bonjour cmdend
+[266]------------------------
+[267] cmd:echo hey > hello cmdend
+[267]------------------------
+[268] cmd:>bonjour >hello < prout cmdend
+bash: line 1: prout: No such file or directory
+[268]------------------------
+[269] cmd:cat bonjour  cmdend
+[269]------------------------
+[270] cmd:cat hello cmdend
+[270]------------------------
+[271] cmd:echo hola > bonjour cmdend
+[271]------------------------
+[272] cmd:echo hey > hello cmdend
+[272]------------------------
+[273] cmd:rm bonjour hello cmdend
+[273]------------------------
+[274] cmd:>bonjour >hello < prout cmdend
+bash: line 1: prout: No such file or directory
+[274]------------------------
+[275] cmd:cat bonjour  cmdend
+[275]------------------------
+[276] cmd:cat hello cmdend
+[276]------------------------
+[277] cmd:echo hola > bonjour cmdend
+[277]------------------------
+[278] cmd:echo hey > hello cmdend
+[278]------------------------
+[279] cmd:>bonjour <prout hello cmdend
+bash: line 1: prout: No such file or directory
+[279]------------------------
+[280] cmd:cat bonjour  cmdend
+[280]------------------------
+[281] cmd:cat hello cmdend
+hey
+[281]------------------------
+[282] cmd:echo hola > bonjour cmdend
+[282]------------------------
+[283] cmd:echo hey > hello cmdend
+[283]------------------------
+[284] cmd:rm bonjour hello cmdend
+[284]------------------------
+[285] cmd:>bonjour <prout hello cmdend
+bash: line 1: prout: No such file or directory
+[285]------------------------
+[286] cmd:cat bonjour  cmdend
+[286]------------------------
+[287] cmd:echo hola > bonjour cmdend
+[287]------------------------
+[288] cmd:<bonjour cat | wc > bonjour cmdend
+[288]------------------------
+[289] cmd:cat bonjour cmdend
+      0       0       0
+[289]------------------------
+[290] cmd:rm -f bonjour cmdend
+[290]------------------------
+[291] cmd:rm bonjour > bonjour cmdend
+[291]------------------------
+[292] cmd:ls -l bonjour cmdend
+ls: cannot access 'bonjour': No such file or directory
+[292]------------------------
+[293] cmd:export HOLA="bonjour hello" cmdend
+[293]------------------------
+[294] cmd:>$HOLA cmdend
+bash: line 1: $HOLA: ambiguous redirect
+[294]------------------------
+[295] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hola
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[295]------------------------
+[296] cmd:export HOLA="bonjour hello" cmdend
+[296]------------------------
+[297] cmd:>"$HOLA" cmdend
+bash: line 1: : No such file or directory
+[297]------------------------
+[298] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hola
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[298]------------------------
+[299] cmd:export HOLA="bonjour hello" cmdend
+[299]------------------------
+[300] cmd:>$"HOLA" cmdend
+[300]------------------------
+[301] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hola
+HOLA
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[301]------------------------
+[302] cmd:export HOLA="bonjour hello" cmdend
+[302]------------------------
+[303] cmd:>$HOLA>hey cmdend
+bash: line 1: $HOLA: ambiguous redirect
+[303]------------------------
+[304] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hola
+HOLA
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[304]------------------------
+[305] cmd:export HOLA="bonjour hello" cmdend
+[305]------------------------
+[306] cmd:>hey>$HOLA cmdend
+bash: line 1: $HOLA: ambiguous redirect
+[306]------------------------
+[307] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hey
+hola
+HOLA
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[307]------------------------
+[308] cmd:export HOLA="bonjour hello" cmdend
+[308]------------------------
+[309] cmd:>hey>$HOLA>hey>hey cmdend
+bash: line 1: $HOLA: ambiguous redirect
+[309]------------------------
+[310] cmd:ls cmdend
+05_to_182_bash_output.txt
+183_to_297_bash_output.txt
+298_to_417_bash_output.txt
+424_to_548_bash_output.txt
+6_bash_output.txt
+a
+b
+bonjour 1
+c
+gnl
+hey
+hola
+HOLA
+hola1
+hola2
+include
+libft
+ls1
+main.c
+main.o
+Makefile
+minishell
+pwd
+src
+tester_05_to_182.sh
+tester_183_to_297.sh
+tester_298_to_417.sh
+tester_424_to_548.sh
+tester_614_to_708.sh
+[310]------------------------
+[311] cmd:export A=hey cmdend
+[311]------------------------
+[312] cmd:export A B=Hola D E C="Que Tal" cmdend
+[312]------------------------
+[313] cmd:echo $PROUT$B$C > /tmp/a > /tmp/b > /tmp/c cmdend
+[313]------------------------
+[314] cmd:cat /tmp/a cmdend
+[314]------------------------
+[315] cmd:cat /tmp/b cmdend
+[315]------------------------
+[316] cmd:cat /tmp/c cmdend
+
+[316]------------------------
