@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:46:57 by aharder           #+#    #+#             */
-/*   Updated: 2025/03/22 11:36:52 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/22 15:57:00 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,13 @@ void	ft_exit(t_env *env, char **arg)
 	void		*red;
 	void		*commands;
 	long long	exit_code;
-	int			ret;
 	
-	if (arg[2])
+	if (arg[2] != NULL)
 	{
 		ft_putstr_fd("error: exit: too many arguments.", 2);
 		exit(1);
 	}
 	exit_code = 0;
-	puts("a");
 	if (arg[1] && check_arg_is_numeric(arg[1]) == 1)
 	{
 		exit_code = ft_atoi_long(arg[1]);
@@ -77,17 +75,10 @@ void	ft_exit(t_env *env, char **arg)
 		else
 			exit_code = exit_code % 256 + 256;
 	}
-	ret = (int)exit_code;
-	puts("a");
 	red = str_to_ptr(ft_getenv(env, "&"));
-	puts("a");
 	commands = str_to_ptr(ft_getenv(env, "+"));
-	puts("a");
 	free_red(red);
-	puts("a");
 	free_cmd(commands);
-	puts("a");
 	free_env(env);
-	puts("a");
-	exit(ret);
+	exit(exit_code);
 }
