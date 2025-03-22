@@ -6,7 +6,7 @@
 /*   By: jmeli <jmeli@student.42luxembourg.lu>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:34:19 by jmeli             #+#    #+#             */
-/*   Updated: 2025/03/22 15:43:14 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/03/22 16:47:16 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,28 @@ char	*ft_strjoin_null(char *s1, char *s2)
 		temp = ft_strjoin(s1, s2);
 	return (temp);
 }
+char	*ft_temp_and_free(char *string, char *easy_separators, char *str, int i)
+{
+	char	*temp;
+	char	*substr;
+
+	//substr = ft_substr(str, i, ft_strlen(str) - i + 1);
+	if (ft_strchr(easy_separators, str[i]))
+	{
+		substr = ft_substr(str, i, ft_strlen(str) - i + 1);
+		temp = ft_strjoin_null(string, substr);
+		free (substr);
+	}
+	else
+	{
+		if (!string)
+			return (NULL);
+		temp = string;
+	}
+	//free (string);
+	//free (substr);
+	return (temp);
+}
 
 char	*ft_string_after_dollar(char *str, int i, t_env *env)
 {
@@ -65,13 +87,11 @@ char	*ft_string_after_dollar(char *str, int i, t_env *env)
 	j = i;
 	while (str[i] && !ft_strchr(all_separators, str[i]))
 		i++;
-	string = ft_substr(str, j, i - j);
-	string = ft_getenv(env, string);
-	if (ft_strchr(easy_separators, str[i]))
-		temp = ft_strjoin_null(string, ft_substr(str, i, ft_strlen(str) - i
-					+ 1));
-	else
-		temp = string;
+	temp = ft_substr(str, j, i - j);
+	string = ft_getenv(env, temp);
+	free(temp);
+	temp = ft_temp_and_free(string, easy_separators, str, i);
+	//free(string);
 	return (temp);
 }
 
@@ -81,7 +101,7 @@ char	*replace_dollar_sign(char *str, int i, t_env *env)
 	int		j;
 
 	all_separators = " ;]=+-{^%$#@!:,./[()*?<>\\|";
-	printf("string!: %s\n", ft_string_after_dollar(str, i, env));
+	//printf("string!: %s\n", ft_string_after_dollar(str, i, env));
 	j = i;
 	while (str[i] && str[i] == '$')
 		i++;
