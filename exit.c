@@ -94,9 +94,12 @@ void	ft_exit(t_env *env, char **arg)
 	
 	if (arg[2] != NULL)
 	{
+		//ft_putstr_fd(arg[2], 1);
 		ft_putstr_fd("error: exit: too many arguments.\n", 2);
-		return ;
-		//exit(1);
+		if (check_arg_is_numeric(arg[1]) && check_arg_is_numeric(arg[2]))
+			return ;
+		else
+			ex	(1);
 	}
 	exit_code = 0;
 	if (arg[1] && check_arg_is_numeric(arg[1]) == 1 && check_if_long(arg[1]) == 1)
@@ -114,11 +117,8 @@ void	ft_exit(t_env *env, char **arg)
 	}
 	red = str_to_ptr(ft_getallenv(env, "&"));
 	commands = str_to_ptr(ft_getallenv(env, "+"));
-	puts("here4");
 	free_red(red);
-	puts("here5");
 	free_cmd(commands);
-	puts("here6");
 	free_env(env);
 	ft_putstr_fd("exit", 1);
 	exit(exit_code);
