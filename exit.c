@@ -12,6 +12,37 @@
 
 #include "../include/minishell.h"
 
+int	check_if_long(char *str)
+{
+	unsigned long long	result;
+	int			sign;
+	int			i;
+
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] && (str[i] == 32 || (str[i] >= 9 && str[i] <= 13)))
+		i++;
+	if (str[i] == '-')
+		sign = sign * -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] && ft_isdigit(str[i]))
+	{
+		result = result * 10 + str[i] - '0';
+		printf("%lld %lld %lld\n", LLONG_MAX, (unsigned long long)LLONG_MIN, result);
+		//if (result > LONG_MAX || (result * sign) < (long long unsigned)LONG_MIN)
+		if (result > (unsigned long long)LLONG_MAX)
+		{
+			return (0);
+		}
+		if ((result > -(unsigned long long)LLONG_MIN) && (sign < 0))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 long long	ft_atoi_long(char *str)
 {
 	long long	result;
@@ -63,12 +94,12 @@ void	ft_exit(t_env *env, char **arg)
 	
 	if (arg[2] != NULL)
 	{
-		ft_putstr_fd("error: exit: too many arguments.", 2);
+		ft_putstr_fd("error: exit: too many arguments.\n", 2);
 		return ;
 		//exit(1);
 	}
 	exit_code = 0;
-	if (arg[1] && check_arg_is_numeric(arg[1]) == 1)
+	if (arg[1] && check_arg_is_numeric(arg[1]) == 1 && check_if_long(arg[1]) == 1)
 	{
 		exit_code = ft_atoi_long(arg[1]);
 		if (exit_code >= 0)
@@ -76,10 +107,19 @@ void	ft_exit(t_env *env, char **arg)
 		else
 			exit_code = exit_code % 256 + 256;
 	}
+	if (arg[1] && (check_arg_is_numeric(arg[1]) == 0 || check_if_long(arg[1]) == 0))
+        {
+		ft_putstr_fd("error: exit: numeric argument required\n", 2);
+                return ;
+	}
 	red = str_to_ptr(ft_getallenv(env, "&"));
 	commands = str_to_ptr(ft_getallenv(env, "+"));
+	puts("here4");
 	free_red(red);
+	puts("here5");
 	free_cmd(commands);
+	puts("here6");
 	free_env(env);
+	ft_putstr_fd("exit", 1);
 	exit(exit_code);
 }

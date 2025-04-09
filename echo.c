@@ -59,7 +59,7 @@ void	print_echo(char **args, int i)
 			continue ;
 		}
 		*/
-		ft_putnbr_fd(i, 1);
+		//ft_putnbr_fd(i, 1);
 		ft_putstr_fd(args[i], 1);
 		if (args[i + 1])
 			ft_putchar_fd(' ', 1);
