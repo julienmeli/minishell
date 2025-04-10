@@ -6,7 +6,7 @@
 /*   By: aharder <aharder@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 00:16:22 by aharder           #+#    #+#             */
-/*   Updated: 2025/03/11 15:01:35 by aharder          ###   ########.fr       */
+/*   Updated: 2025/04/10 17:46:57 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ t_env	*ft_create_var(char *arg)
 	else
 	{
 		new_elem->value = ft_strdup(arg);
-		new_elem->result = ft_strdup("''");
+		new_elem->result = NULL;
+		//new_elem->result = ft_strdup("''");
 		new_elem->next = NULL;
 	}
 	return (new_elem);
@@ -79,7 +80,7 @@ int	export(char **args, t_env **env)
 	int		index;
 
 	index = -1;
-	if (!args[1])
+	if (!args[1] || args[1] == NULL)
 		return (print_export(env));
 	else
 	{
