@@ -92,14 +92,14 @@ void	ft_exit(t_env *env, char **arg)
 	void		*commands;
 	long long	exit_code;
 	
-	if (arg[2] != NULL)
+	if (arg[1] != NULL && arg[2] != NULL)
 	{
 		//ft_putstr_fd(arg[2], 1);
 		ft_putstr_fd("error: exit: too many arguments.\n", 2);
 		if (check_arg_is_numeric(arg[1]) && check_arg_is_numeric(arg[2]))
 			return ;
 		else
-			ex	(1);
+			exit(1);
 	}
 	exit_code = 0;
 	if (arg[1] && check_arg_is_numeric(arg[1]) == 1 && check_if_long(arg[1]) == 1)
