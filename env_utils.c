@@ -49,7 +49,7 @@ char	**copy_environ(t_env **env)
 	while (ptr)
 	{
 		temp = ft_strjoin(ptr->value, "=\"");
-		if (ptr->result && ft_strlen(ptr->result))
+		if (ptr->result)
 		{
 			temp_2 =ft_strjoin(ptr->result, "\"");
 			array[i] = ft_strjoin(temp, temp_2);
