@@ -80,7 +80,8 @@ int	export(char **args, t_env **env)
 	int		index;
 
 	index = -1;
-	if ((!args[1] || args[1] == NULL || args[1][0] == '\0') && !args[2])
+	if (args == NULL || args[1] == NULL || args[1][0] == '\0')
+	//if ((!args[1] || args[1] == NULL || args[1][0] == '\0') && !args[2])
 		return (print_export(env));
 	else
 	{
