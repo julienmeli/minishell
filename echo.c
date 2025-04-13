@@ -105,7 +105,7 @@ int	echo(char **args)
 	i = 1;
 	newline = 0;
 	//puts("a");
-	//echo_check(&args);
+	echo_check(&args);
 	//ft_putstr_fd(args[0], 1);
 	//ft_putchar_fd('\n', 1);
 	//ft_putstr_fd(args[1], 1);
