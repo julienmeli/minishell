@@ -6,7 +6,7 @@
 /*   By: aharder <aharder@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:46:57 by aharder           #+#    #+#             */
-/*   Updated: 2025/03/23 18:40:10 by aharder          ###   ########.fr       */
+/*   Updated: 2025/04/14 12:05:52 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,14 +92,10 @@ void	ft_exit(t_env *env, char **arg)
 	void		*commands;
 	long long	exit_code;
 	
-	if (arg[1] != NULL && arg[2] != NULL)
+	if (arg[1] != NULL && check_arg_is_numeric (arg[1]) && arg[2] != NULL)
 	{
-		//ft_putstr_fd(arg[2], 1);
-		ft_putstr_fd("error: exit: too many arguments.\n", 2);
-		if (check_arg_is_numeric(arg[1]) && check_arg_is_numeric(arg[2]))
-			return ;
-		else
-			exit(1);
+		ft_putstr_fd("exit: too many arguments\n", 2);	
+		return ;
 	}
 	exit_code = 0;
 	if (arg[1] && check_arg_is_numeric(arg[1]) == 1 && check_if_long(arg[1]) == 1)
@@ -111,9 +107,9 @@ void	ft_exit(t_env *env, char **arg)
 			exit_code = exit_code % 256 + 256;
 	}
 	if (arg[1] && (check_arg_is_numeric(arg[1]) == 0 || check_if_long(arg[1]) == 0))
-        {
+	{
 		ft_putstr_fd("error: exit: numeric argument required\n", 2);
-                return ;
+		exit_code = 2;
 	}
 	red = str_to_ptr(ft_getallenv(env, "&"));
 	commands = str_to_ptr(ft_getallenv(env, "+"));

@@ -6,7 +6,7 @@
 /*   By: aharder <aharder@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 01:15:22 by aharder           #+#    #+#             */
-/*   Updated: 2025/04/10 17:27:48 by jmeli            ###   ########.fr       */
+/*   Updated: 2025/04/14 11:14:28 by jmeli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int	index_existing_var(char *arg, t_env **env)
 	ptr = *env;
 	while (ptr)
 	{
-		if (ft_strncmp(ptr->value, arg, len) == 0)
+		if (ptr->value && ft_strncmp(ptr->value, arg, len) == 0)
 			return (i);
 		i++;
 		ptr = ptr->next;
